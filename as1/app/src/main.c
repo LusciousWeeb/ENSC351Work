@@ -61,9 +61,6 @@ static void flashResult(bool correct) {
 
 }
 
-static bool upOrDown(JoystickDirection direction) {
-    return direction == JOYSTICK_UP || direction == JOYSTICK_DOWN;
-}
 
 int main(void) {
     printf("Hello embedded world, from Lex Leung!\n");
@@ -120,13 +117,12 @@ int main(void) {
                 break;
             
 */
-        if (upOrDown(direction)) {
+        if ((direction == JOYSTICK_UP) || (direction == JOYSTICK_DOWN)) {
 
             printf("Please let go of joystick\n");
 
-            while (upOrDown(direction)) {
-                printf("Please let go!\n");
-                sleepForMs(20);
+            while ((direction == JOYSTICK_UP) || (direction == JOYSTICK_DOWN)) {
+                sleepForMs(100);
                 direction = Joystick_getDirection();
             }
         }
@@ -140,8 +136,8 @@ int main(void) {
         // Check if move too early
 
         direction = Joystick_getDirection();
-
-        if (upOrDown(direction)) {
+ 
+        if ((direction == JOYSTICK_UP) || (direction == JOYSTICK_DOWN)) {
             printf("TOO SOON!\n");
             continue;
         }
@@ -190,8 +186,13 @@ int main(void) {
 
         long long reactionTime = getTimeInMs() - startTime;
 
+        if ((response == JOYSTICK_RIGHT) || (response == JOYSTICK_LEFT)) {
 
-        if (targetDirection == response) {
+            printf("User selected to quit.\n");
+
+            return 1;
+
+        } if (targetDirection == response) {
             printf("Correct!\n");
 
             if ((reactionTime < highScore) || (highScore == -1)) {
@@ -200,7 +201,7 @@ int main(void) {
             }
 
             printf("Your reaction time was %lldms; best so far in game is %lldms\n", 
-                reactionTime, 
+                reactionTime,
                 highScore);
 
             flashResult(true);
