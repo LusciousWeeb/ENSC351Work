@@ -26,6 +26,34 @@ app/CMakeFiles/reaction_timer.dir/src/main.c.o: \
  /usr/aarch64-linux-gnu/include/bits/stdio_lim.h \
  /usr/aarch64-linux-gnu/include/bits/floatn.h \
  /usr/aarch64-linux-gnu/include/bits/floatn-common.h \
+ /usr/aarch64-linux-gnu/include/stdlib.h \
+ /usr/aarch64-linux-gnu/include/bits/waitflags.h \
+ /usr/aarch64-linux-gnu/include/bits/waitstatus.h \
+ /usr/aarch64-linux-gnu/include/sys/types.h \
+ /usr/aarch64-linux-gnu/include/bits/types/clock_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/clockid_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/time_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/timer_t.h \
+ /usr/aarch64-linux-gnu/include/bits/stdint-intn.h \
+ /usr/aarch64-linux-gnu/include/endian.h \
+ /usr/aarch64-linux-gnu/include/bits/endian.h \
+ /usr/aarch64-linux-gnu/include/bits/endianness.h \
+ /usr/aarch64-linux-gnu/include/bits/byteswap.h \
+ /usr/aarch64-linux-gnu/include/bits/uintn-identity.h \
+ /usr/aarch64-linux-gnu/include/sys/select.h \
+ /usr/aarch64-linux-gnu/include/bits/select.h \
+ /usr/aarch64-linux-gnu/include/bits/types/sigset_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/__sigset_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_timeval.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_timespec.h \
+ /usr/aarch64-linux-gnu/include/bits/pthreadtypes.h \
+ /usr/aarch64-linux-gnu/include/bits/thread-shared-types.h \
+ /usr/aarch64-linux-gnu/include/bits/pthreadtypes-arch.h \
+ /usr/aarch64-linux-gnu/include/bits/atomic_wide_counter.h \
+ /usr/aarch64-linux-gnu/include/bits/struct_mutex.h \
+ /usr/aarch64-linux-gnu/include/bits/struct_rwlock.h \
+ /usr/aarch64-linux-gnu/include/alloca.h \
+ /usr/aarch64-linux-gnu/include/bits/stdlib-float.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdbool.h \
  /home/lll10/ENSC351/ENSC351Work/as1/app/include/badmath.h \
  /home/lll10/ENSC351/ENSC351Work/as1/hal/include/hal/button.h \
@@ -39,14 +67,7 @@ app/CMakeFiles/reaction_timer.dir/src/main.c.o: \
  /usr/aarch64-linux-gnu/include/bits/unistd_ext.h \
  /usr/aarch64-linux-gnu/include/time.h \
  /usr/aarch64-linux-gnu/include/bits/time.h \
- /usr/aarch64-linux-gnu/include/bits/types/clock_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/time_t.h \
  /usr/aarch64-linux-gnu/include/bits/types/struct_tm.h \
- /usr/aarch64-linux-gnu/include/bits/types/struct_timespec.h \
- /usr/aarch64-linux-gnu/include/bits/endian.h \
- /usr/aarch64-linux-gnu/include/bits/endianness.h \
- /usr/aarch64-linux-gnu/include/bits/types/clockid_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/timer_t.h \
  /usr/aarch64-linux-gnu/include/bits/types/struct_itimerspec.h \
  /usr/aarch64-linux-gnu/include/bits/types/locale_t.h \
  /usr/aarch64-linux-gnu/include/bits/types/__locale_t.h \

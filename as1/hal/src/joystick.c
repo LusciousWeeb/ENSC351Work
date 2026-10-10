@@ -13,15 +13,15 @@
 #define SPI_SPEED 250000
 
 // Threshold Values - Tested using spi_adc_test.c
-#define X_LOW_THRESH 100 // lowest = 0
-#define X_HIGH_THRESH 3900 // max = 4092
-#define Y_LOW_THRESH 100 // lowest = 0
-#define Y_HIGH_THRESH 3900 // max = 4095
+#define X_LOW_THRESH 800 // lowest = 0
+#define X_HIGH_THRESH 3300 // max = 4092
+#define Y_LOW_THRESH 800 // lowest = 0
+#define Y_HIGH_THRESH 3300 // max = 4095
 #define X_MID_VAL 2054
 #define Y_MID_VAL 2019
 
 static int spiFd = -1;
-static bool intialized = false;
+static bool initialized = false;
 
 static int read_ch(int fd, int ch, uint32_t speed_hz) {
 
@@ -75,11 +75,12 @@ void Joystick_initialize(void) {
         exit(EXIT_FAILURE);
     }
 
-    intialized = true;
+    initialized = true;
 }
 
 JoystickDirection Joystick_getDirection(void) {
-    assert(intialized);
+
+    assert(initialized);
 
     int x = read_ch(spiFd, 0, SPI_SPEED);
     int y = read_ch(spiFd, 1, SPI_SPEED);
@@ -101,4 +102,12 @@ JoystickDirection Joystick_getDirection(void) {
     }
 
     return JOYSTICK_NONE;
+}
+
+void Joystick_cleanup(void) {
+    assert(initialized);
+
+    close(spiFd);
+    spiFd = -1;
+    initialized = false;
 }

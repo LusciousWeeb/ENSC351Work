@@ -2,6 +2,7 @@
 // Has main(); does initialization and cleanup and perhaps some basic logic.
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include "badmath.h"
 #include "hal/button.h"
@@ -18,7 +19,17 @@ static void sleepForMs(long long delayMs) {
 
     nanosleep(&delay, NULL);
 }
-/*
+
+static long long getTimeInMs(void) {
+    struct timespec spec;
+    clock_gettime(CLOCK_REALTIME, &spec);
+
+    long long seconds = spec.tv_sec;
+    long long nanoseconds = spec.tv_nsec;
+
+    return seconds * 1000 + nanoseconds / 1000000;
+
+}
 static void flashGetReady(void) {
     for (int i = 0; i < 4; i++) {
         Led_setGreen(true);
@@ -30,6 +41,7 @@ static void flashGetReady(void) {
         Led_setRed(false);
     }
 }
+
 
 static void flashResult(bool correct) {
     for (int i = 0; i < 5; i++) {
@@ -48,13 +60,22 @@ static void flashResult(bool correct) {
     }
 
 }
-    */
+
+static bool upOrDown(JoystickDirection direction) {
+    return direction == JOYSTICK_UP || direction == JOYSTICK_DOWN;
+}
+
 int main(void) {
     printf("Hello embedded world, from Lex Leung!\n");
+    sleepForMs(150);
+    printf("When the LEDs light up, press the joystick in that direction!\n");
+    sleepForMs(100);
+    printf("Press left or right to exit\n");
 
 
     Led_initialize();
     Joystick_initialize();
+    srand((unsigned int)time(NULL));
 /*
     // Green LED - 1s
     Led_setGreen(true);
@@ -68,27 +89,128 @@ int main(void) {
 
     Led_cleanup();
 */
-    while (1) {
-        JoystickDirection direction = Joystick_getDirection();
+    long long highScore;
+    while (true) {
+        printf("Get ready...\n");
+        flashGetReady();
+        
+        // Ensure that the joystick is released
 
-        switch(direction) {
+        JoystickDirection direction = Joystick_getDirection();
+/*
+        switch (direction) {
             case JOYSTICK_UP:
-                printf("UP\n");
+                printf("DEBUG: UP\n");
                 break;
+
             case JOYSTICK_DOWN:
-                printf("DOWN\n");
+                printf("DEBUG: DOWN\n");
                 break;
-            case JOYSTICK_RIGHT:
-                printf("RIGHT\n");
-                break;
+
             case JOYSTICK_LEFT:
-                printf("LEFT\n");
+                printf("DEBUG: LEFT\n");
                 break;
+
+            case JOYSTICK_RIGHT:
+                printf("DEBUG: RIGHT\n");
+                break;
+
             case JOYSTICK_NONE:
+                printf("DEBUG: NONE\n");
                 break;
+            
+*/
+        if (upOrDown(direction)) {
+
+            printf("Please let go of joystick\n");
+
+            while (upOrDown(direction)) {
+                printf("Please let go!\n");
+                sleepForMs(20);
+                direction = Joystick_getDirection();
+            }
         }
 
-        sleepForMs(100);
+        // Generate random delay (500ms-3000ms)
+        long long randomDelayMs = 500 + (rand() % 2501);
+
+        sleepForMs(randomDelayMs);
+
+
+        // Check if move too early
+
+        direction = Joystick_getDirection();
+
+        if (upOrDown(direction)) {
+            printf("TOO SOON!\n");
+            continue;
+        }
+
+        JoystickDirection targetDirection;
+        if (rand() % 2 == 0) {
+            targetDirection = JOYSTICK_UP;
+
+            printf("Press Up now!\n");
+            Led_setGreen(true);
+        } else {
+            targetDirection = JOYSTICK_DOWN;
+
+            printf("Press Down now!\n");
+            Led_setGreen(true);
+        }
+
+        // Get time now
+        long long startTime = getTimeInMs();
+
+        JoystickDirection response = JOYSTICK_NONE;
+
+        while (response == JOYSTICK_NONE) {
+            response = Joystick_getDirection();
+
+            long long timeElapsed = getTimeInMs() - startTime;
+
+            if (timeElapsed >= 5000) {
+                printf("No input detected! Exiting program\n");
+                Led_setGreen(false);
+                Led_setRed(false);
+                Joystick_cleanup();
+                Led_cleanup();
+                
+
+                return 0;
+            }
+
+            // sleepForMs(5);
+        }
+
+        // Once out of loop, user reacted:
+
+        Led_setGreen(false);
+        Led_setRed(false);
+
+        long long reactionTime = getTimeInMs() - startTime;
+
+
+        if (targetDirection == response) {
+            printf("Correct!\n");
+
+            if ((reactionTime < highScore) || (highScore == -1)) {
+                highScore = reactionTime;
+                printf("New best time!\n");
+            }
+
+            printf("Your reaction time was %lldms; best so far in game is %lldms\n", 
+                reactionTime, 
+                highScore);
+
+            flashResult(true);
+
+        } else {
+            printf("Incorrect.\n");
+
+            flashResult(false);
+        }
+
     }
 
     Joystick_cleanup();
