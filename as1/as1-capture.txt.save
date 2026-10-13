@@ -1,0 +1,150 @@
+lll10@351VMLinux:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:3d:cc:56 brd ff:ff:ff:ff:ff:ff
+    altname enx0800273dcc56
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 84920sec preferred_lft 84920sec
+    inet6 fd17:625c:f037:2:aa6f:ba3d:e7e7:8fb6/64 scope global dynamic noprefixroute 
+       valid_lft 85996sec preferred_lft 13996sec
+    inet6 fe80::2b01:caeb:fb2b:9783/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 08:00:27:bd:42:d1 brd ff:ff:ff:ff:ff:ff
+    altname enx080027bd42d1
+4: enx1cba8ca2ed6a: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 1c:ba:8c:a2:ed:6a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx1cba8ca2ed6a
+       valid_lft 1191sec preferred_lft 1191sec
+    inet6 fe80::3911:a99e:cd94:9c84/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+lll10@351VMLinux:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=13.8 ms
+^C
+--- 192.168.7.2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 13.776/13.776/13.776/0.000 ms
+lll10@351VMLinux:~$ ssh lll10@192.168.7.2
+Debian GNU/Linux 12
+
+BeagleBoard.org Debian Bookworm Minimal Image 2025-03-05
+Support: https://bbb.io/debian
+default username is [lll10]
+
+lll10@192.168.7.2's password: 
+
+                                                                            ,----,.           
+                   ,--.                                 .--,-``-.         ,'   ,' |           
+    ,---,.       ,--.'|  .--.--.     ,----..           /   /     '.     ,'   .'   |     ,---, 
+  ,'  .' |   ,--,:  : | /  /    '.  /   /   \         / ../        ;  ,----.'    .'  ,`--.' | 
+,---.'   |,`--.'`|  ' :|  :  /`. / |   :     :        \ ``\  .`-    ' |    |   .'   /    /  : 
+|   |   .'|   :  :  | |;  |  |--`  .   |  ;. /         \___\/   \   : :    :  |--, :    |.' ' 
+:   :  |-,:   |   \ | :|  :  ;_    .   ; /--`               \   :   | :    |  ;.' \`----':  | 
+:   |  ;/||   : '  '; | \  \    `. ;   | ;                  /  /   /  |    |      |   '   ' ; 
+|   :   .''   ' ;.    ;  `----.   \|   : |                  \  \   \  `----'.'\   ;   |   | | 
+|   |  |-,|   | | \   |  __ \  \  |.   | '___           ___ /   :   |   __  \  .  |   '   : ; 
+'   :  ;/|'   : |  ; .' /  /`--'  /'   ; : .'|         /   /\   /   : /   /\/  /  :   |   | ' 
+|   |    \|   | '`--'  '--'.     / '   | '/  :        / ,,/  ',-    ./ ,,/  ',-   .   '   : | 
+|   :   .''   : |        `--'---'  |   :    /         \ ''\        ; \ ''\       ;    ;   |.' 
+|   | ,'  ;   |.'                   \   \ .'           \   \     .'   \   \    .'     '---'   
+`----'    '---'                      `---`              `--`-,,-'      `--`-,-'               
+                                                                                              
+
+
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⣩⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢩⣿⢫⣿⣿⣿⣿⣿⣏⢏⢿⣿⣿⡌⠻⣿⣿⣯⣹⣿⣿⣿⣿⣿⣯⡹⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡿⢫⣤⣤⡐⢶⣮⣭⢛⣵⣿⣿⣿⣿⣿⣿⢹⣿⣿⣿⠿⠿⢿⣛⣛⣛⣛⣛⣃⣛⡋⠼⢿⣿⣿⣿⣿⣿⡌⡎⢿⣿⣿⡌⢎⠻⣿⣿⣯⡻⣿⣿⣿⣿⣷⡜⣿⣿⣿⣿
+⣿⣿⣿⣿⡟⣴⣿⣿⠿⠿⡌⠟⣱⣿⣿⣿⣿⣿⣿⣿⣿⣼⣿⣷⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣭⣙⠻⣿⣷⢸⡜⣿⣿⣿⡜⣷⡙⣿⣿⣿⣮⡻⣿⣿⣿⣿⡜⢿⣿⣿
+⣿⣿⣿⡟⠼⣋⣵⣶⡿⢋⢄⡆⣧⣝⡻⠿⠿⣋⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣝⠎⣷⢸⣿⣿⣷⠸⣿⡈⢿⣿⣿⣷⣌⢿⣿⣿⣿⡌⢿⣿
+⣿⣿⡿⣰⣾⣿⣿⡟⣱⢏⣾⣧⢻⣿⠟⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠂⣿⣿⣿⡇⣿⡇⢊⢿⣿⣿⣿⣧⡹⣿⣿⣿⡜⣿
+⣿⣿⢣⣿⣿⣿⡟⣰⡏⢸⣿⣿⡮⣣⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣻⣭⣭⣭⣭⣽⣛⡻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣝⢿⣿⣷⢹⡇⡸⡎⢿⣿⣿⣿⣷⡙⣿⣿⣷⣿
+⣿⡟⣼⣿⣿⣿⢡⣿⠀⣾⣿⡟⣱⣿⣿⣿⣿⣿⣿⡿⢻⣿⣿⣿⣿⣿⣿⣻⣿⣿⣛⣛⠿⢷⣮⣝⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡻⣿⢸⡇⡇⣿⡘⣿⣿⣿⣿⣷⡘⠿⣋⣵
+⣿⣷⣿⣿⣿⡇⣾⡇⡇⣿⠏⣼⣿⣿⣿⣿⣿⣿⢋⣴⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣮⣝⡻⣮⡻⣿⣿⣿⡙⣿⣿⣿⣿⣿⣿⣷⡙⢸⡇⣧⢻⣧⢹⣿⣿⠿⣋⣵⣾⡿⢏
+⣿⣿⣿⣿⣿⢸⣾⢱⡇⡟⣼⣿⣿⣿⣿⣿⡿⢡⣿⡟⣩⣾⣿⡛⢿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣝⠊⠻⣿⣿⣌⢿⣿⣿⣿⣿⣿⣿⡌⢳⣿⢸⣿⡈⢟⣵⣾⣿⠟⢫⢰⢣
+⣿⣿⣿⣿⡇⣿⣿⢸⡇⢱⣿⣿⣿⣿⣿⡿⢱⣿⢋⣾⣿⣿⣿⣿⡆⡙⢷⣙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡘⠻⣿⣆⢻⣿⣿⣿⣿⣿⣿⡄⠟⠼⢋⣴⣿⠟⣫⣵⣿⢸⡖⣡
+⣿⣿⣿⣿⢰⣿⣿⢸⢇⣿⣿⣿⣿⣿⣿⢡⣿⢣⣾⣿⣿⣿⣿⣿⡇⢹⣤⣙⢷⣝⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡹⣿⣧⢻⣿⣿⣿⣿⣿⣿⡄⢵⣿⠟⣵⣾⣿⣿⢣⡏⢸⣿
+⣿⣿⣿⡟⣼⣿⣿⠸⣸⣿⣿⣿⣿⣿⡏⣾⢇⣾⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⣷⣬⣓⢮⣛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡜⣿⣆⢿⣿⣿⣿⣿⡟⢿⡜⢣⣾⣿⣿⣿⡏⡎⣼⡇⣿
+⣿⣿⣿⡇⣿⣿⣿⡆⡟⣿⣿⣿⣿⣿⡇⡟⣼⣿⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣷⣮⣍⣒⠍⢋⡩⠭⢹⣿⣿⣿⣿⣿⡘⣿⡌⣿⣿⣿⣿⣿⡘⣷⢹⣿⣿⣿⡟⡸⣸⣿⣇⣿
+⣿⣿⣿⢱⣿⣿⣿⢱⡇⣿⣿⣿⣿⣿⡀⢣⣿⣿⣿⣿⣿⣿⢿⣿⢡⣿⣿⣿⣿⣿⣿⣿⣿⣿⢣⣿⡶⢞⣡⣤⡒⠒⠚⣛⣛⣥⢹⣷⠙⣹⣿⣿⣿⣇⣿⡌⣿⣿⣿⢡⢡⣿⣿⣿⣿
+⣿⣿⣿⢸⣿⣿⡏⢸⡇⣿⣿⣿⣿⣿⡇⣸⣿⣿⣿⣿⣿⡟⢰⠇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣴⣶⣶⠟⣩⣴⣾⡿⠛⠛⠙⠫⠌⢁⡌⣿⣿⣿⣿⣿⢸⡇⠿⢟⣵⠃⡇⣿⣿⣿⣿
+⣿⣿⣿⢸⣿⣿⡇⢸⡇⣿⣿⣿⣿⣿⣇⢿⣿⣿⣿⣿⡿⢑⠊⣬⡟⢛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢢⡿⠋⠐⠀⢀⠤⠀⠀⠄⢻⡇⣿⣿⣿⣿⡿⢸⣇⣜⠻⢣⣾⡇⣿⣿⣿⣿
+⣿⣿⣿⢸⣿⣿⢸⣸⡇⣿⣿⣿⣿⣿⣿⠸⣿⣿⣿⡋⠎⠈⠾⡛⠵⠿⢿⣦⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⠗⢀⣾⡀⠻⢀⣠⠇⢤⢸⢱⣿⣿⣿⣿⡇⠊⡯⠋⣴⣿⣿⣷⣿⣿⣿⣿
+⣐⠶⣿⣬⣭⣭⣼⡃⣇⢻⣿⣿⣿⣿⣿⣇⢿⣿⡿⠃⣰⢟⣡⣾⣿⣷⣦⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣼⣿⣿⣯⠍⢁⣰⣿⠘⡜⣿⣿⣿⣿⢱⠀⠃⡇⢹⣿⣿⣿⣿⣿⣿⣿
+⣜⡳⢄⠲⠎⣭⢟⡃⣿⢸⣿⣿⣿⣿⣿⣿⡘⢟⣥⣾⣧⡾⠛⠉⠉⠉⠉⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⢠⡇⣿⣿⣿⡏⡆⢣⠀⠀⡜⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣶⡍⠻⢿⡜⢷⢸⡆⣿⣿⣿⣿⣿⡝⣧⢻⡻⠿⠟⠁⣠⡆⠰⢷⠀⢀⠀⣍⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢃⣿⡇⣿⣿⡟⡼⢰⢸⢀⠆⡇⢿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⡇⠞⣶⢉⠲⡌⣿⠸⣿⣿⣿⣿⣷⠹⣄⠻⣿⣶⣦⡙⠿⣶⣆⣘⠛⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⣾⣿⡇⣿⠟⣼⢡⢸⢸⣿⢠⢡⣾⣿⣿⣿⣿⡿⣿
+⣿⣿⣿⣿⢀⣿⢸⣿⣆⢻⡇⢻⣿⣿⣿⣿⣧⢻⡜⣌⠻⣿⣿⣿⣴⣥⣦⣶⣾⣿⣿⣿⣿⠟⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⡇⢏⣾⢣⣾⢨⡇⣿⡆⣼⣿⣼⣿⣿⣿⣇⣿
+⣿⣿⣿⣿⡘⢸⣼⣿⣿⡌⣷⢀⢿⣿⣿⣿⣿⣧⠹⡌⢳⠝⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡐⠃⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣣⡾⢡⣿⡏⣼⠃⣿⡇⣿⣿⣿⣿⣿⣿⢸⣿
+⣿⣿⣿⣿⡇⡞⣿⣿⣿⣷⡘⡎⡎⢿⣿⣿⣿⣿⡆⡔⠔⢾⣮⡻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋⣼⣿⣿⣿⣿⣿⡿⢁⣾⣿⢣⡟⡄⣿⡇⣿⣟⣿⣿⣿⡟⣼⣿
+⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣷⠱⡀⣦⠻⣿⣿⣿⣷⠀⡐⣌⠻⣷⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣯⣵⣾⣿⣿⣿⣿⣿⣿⢏⣴⣿⣿⠃⡚⣰⢇⣿⢱⢻⣿⣿⣿⣿⢇⣿⣿
+⣿⣿⣿⣿⣿⡌⣿⣿⣿⣿⣿⡇⡡⠡⢡⡌⢿⣇⢻⣤⢳⠙⣰⣈⣻⣿⣮⣛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⠿⡿⣿⢿⠛⣡⣿⣻⠝⢁⢀⣴⡾⢸⡿⡘⣼⣿⣿⣿⣿⢸⣿⣿
+⣿⣿⣿⣿⣿⣇⢻⣿⣿⣿⣿⡇⡇⠀⠙⠡⣰⣝⠎⡿⡘⡆⣿⣿⣿⣿⣿⣿⣷⣶⣭⣭⣟⣛⣓⡶⠷⠷⠿⣾⣿⣿⡿⢟⣡⣾⡿⠟⠁⠀⡁⢿⣿⣧⣿⡇⢣⣿⣿⣿⣿⣧⣿⢇⣿
+⣿⣿⣿⣿⣿⣿⡸⣿⣿⣿⣿⡇⡇⣀⢔⣴⣿⣿⣷⢠⣷⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⡀⠀⡀⠀⣐⣚⣛⣭⠱⢀⡀⢀⣌⢿⣮⠻⣿⣿⠰⣼⣿⣿⣿⣿⣿⡟⣼⣿
+⣿⣿⣿⣿⣿⣿⡇⢿⣿⣿⣿⡇⢷⣶⣿⣿⣿⣿⣿⣸⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⡆⣲⡆⣶⡆⣿⣿⡟⠌⢻⣦⡻⣵⡝⠏⢄⣿⣿⣿⣿⣿⣿⢡⣿⣿
+⣿⣿⣿⣿⣿⣿⣧⠸⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⡇⣿⠇⣱⣶⣬⣝⡣⠹⣷⡜⢿⡆⣸⣿⣿⣿⣿⣿⡟⣼⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⢀⢻⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣸⣿⣿⣷⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢼⡇⢋⡄⣿⠿⠟⠛⠉⠁⠘⢿⣮⢃⣿⣿⣿⣿⣿⣿⢇⣿⣿⣿
+⣿⣿⢹⣿⣿⣿⣿⡇⡜⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⡻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠘⣠⢸⡇⠠⡀⢀⣀⣀⣀⣤⠈⠻⢸⣿⣿⣿⣿⣿⣿⢸⣿⢋⣿
+⣿⣿⡎⣿⣿⣿⣿⣷⢱⢹⣿⣿⢈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⢸⡇⢸⣿⣿⠿⢟⣛⣩⣤⣥⢸⣿⡟⣿⣿⣿⡟⣼⡏⣼⣿ 
+Last login: Thu Oct  8 12:33:21 2026 from 192.168.7.1
+lll10@pozload:~$ cd //mnt/remote/myApps
+lll10@pozload://mnt/remote/myApps$ sudo ./reaction_timer
+[sudo] password for lll10: 
+Hello embedded world, from Lex Leung!
+When the LEDs light up, press the joystick in that direction!
+Press left or right to exit
+Get ready...
+Press Down now!
+Correct!
+New best time!
+Your reaction time was 716ms; best so far in game is 716ms
+Get ready...
+Press Down now!
+Correct!
+New best time!
+Your reaction time was 669ms; best so far in game is 669ms
+Get ready...
+Press Up now!
+Incorrect.
+Get ready...
+Press Up now!
+User selected to quit.
+lll10@pozload://mnt/remote/myApps$ cd ../
+lll10@pozload://mnt/remote$ ./internetToTarget.sh 
+SIOCADDRT: File exists
+lll10@pozload://mnt/remote$ ping 192.168.7.1
+PING 192.168.7.1 (192.168.7.1) 56(84) bytes of data.
+64 bytes from 192.168.7.1: icmp_seq=1 ttl=64 time=9.98 ms
+64 bytes from 192.168.7.1: icmp_seq=2 ttl=64 time=7.42 ms
+64 bytes from 192.168.7.1: icmp_seq=3 ttl=64 time=12.6 ms
+^C
+--- 192.168.7.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.422/9.990/12.568/2.100 ms
+lll10@pozload://mnt/remote$ ping google.ca
+PING google.ca (142.251.33.195) 56(84) bytes of data.
+64 bytes from iad23s96-in-f3.1e100.net (142.251.33.195): icmp_seq=1 ttl=62 time=22.8 ms
+64 bytes from pnseab-ac-in-f3.1e100.net (142.251.33.195): icmp_seq=2 ttl=62 time=26.7 ms
+64 bytes from iad23s96-in-f3.1e100.net (142.251.33.195): icmp_seq=3 ttl=62 time=29.0 ms
+^C
+--- google.ca ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 22.770/26.142/28.964/2.558 ms
+lll10@pozload://mnt/remote$ cat /boot/firmware/ID.txt
+BeagleBoard.org Debian Bookworm Minimal Image 2025-03-05
+lll10@pozload://mnt/remote$ cat /proc/version
+Linux version 6.1.83-ti-arm64-r67 (voodoo@rpi5b8g-65) (gcc (Debian 12.2.0-14) 12.2.0, GNU ld (GNU Binutils for Debian) 2.40) #1bookworm SMP PREEMPT_DYNAMIC Wed Feb  5 22:40:21 UTC 2025
+lll10@pozload://mnt/remote$ proc/uptime
+981.37 3816.24
+lll10@pozload://mnt/remote$ ./mountNFS.sh 
+mount: (hint) your fstab has been modified, but systemd still uses
+       the old version; use 'systemctl daemon-reload' to reload.
+lll10@pozload://mnt/remote$ ls
+helloworld_target  internetToTarget.sh  led  mountNFS.sh  myApps  nfs_message.txt  spi_adc_test  spi_adc_test.c  test_nfs.txt  triggerLED.c
+lll10@pozload://mnt/remote$ exit
+logout
+Connection to 192.168.7.2 closed.
