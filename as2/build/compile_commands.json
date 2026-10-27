@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/lll10/ENSC351/ENSC351Work/as1/build/hal",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/lll10/ENSC351/ENSC351Work/as1/hal/hal/include -I/home/lll10/ENSC351/ENSC351Work/as1/hal/include -g -std=gnu11 -Wall -Werror -Wpedantic -Wextra -fdiagnostics-color -fsanitize=address -pthread -o CMakeFiles/hal.dir/src/button.c.o -c /home/lll10/ENSC351/ENSC351Work/as1/hal/src/button.c",
+  "file": "/home/lll10/ENSC351/ENSC351Work/as1/hal/src/button.c",
+  "output": "hal/CMakeFiles/hal.dir/src/button.c.o"
+},
+{
+  "directory": "/home/lll10/ENSC351/ENSC351Work/as1/build/hal",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/lll10/ENSC351/ENSC351Work/as1/hal/hal/include -I/home/lll10/ENSC351/ENSC351Work/as1/hal/include -g -std=gnu11 -Wall -Werror -Wpedantic -Wextra -fdiagnostics-color -fsanitize=address -pthread -o CMakeFiles/hal.dir/src/joystick.c.o -c /home/lll10/ENSC351/ENSC351Work/as1/hal/src/joystick.c",
+  "file": "/home/lll10/ENSC351/ENSC351Work/as1/hal/src/joystick.c",
+  "output": "hal/CMakeFiles/hal.dir/src/joystick.c.o"
+},
+{
+  "directory": "/home/lll10/ENSC351/ENSC351Work/as1/build/hal",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/lll10/ENSC351/ENSC351Work/as1/hal/hal/include -I/home/lll10/ENSC351/ENSC351Work/as1/hal/include -g -std=gnu11 -Wall -Werror -Wpedantic -Wextra -fdiagnostics-color -fsanitize=address -pthread -o CMakeFiles/hal.dir/src/led.c.o -c /home/lll10/ENSC351/ENSC351Work/as1/hal/src/led.c",
+  "file": "/home/lll10/ENSC351/ENSC351Work/as1/hal/src/led.c",
+  "output": "hal/CMakeFiles/hal.dir/src/led.c.o"
+},
+{
+  "directory": "/home/lll10/ENSC351/ENSC351Work/as1/build/hal",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/lll10/ENSC351/ENSC351Work/as1/hal/hal/include -I/home/lll10/ENSC351/ENSC351Work/as1/hal/include -g -std=gnu11 -Wall -Werror -Wpedantic -Wextra -fdiagnostics-color -fsanitize=address -pthread -o CMakeFiles/hal.dir/src/spi_adc_test.c.o -c /home/lll10/ENSC351/ENSC351Work/as1/hal/src/spi_adc_test.c",
+  "file": "/home/lll10/ENSC351/ENSC351Work/as1/hal/src/spi_adc_test.c",
+  "output": "hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o"
+},
+{
+  "directory": "/home/lll10/ENSC351/ENSC351Work/as1/build/app",
+  "command": "/usr/bin/aarch64-linux-gnu-gcc  -I/home/lll10/ENSC351/ENSC351Work/as1/app/include -I/home/lll10/ENSC351/ENSC351Work/as1/hal/include -g -std=gnu11 -Wall -Werror -Wpedantic -Wextra -fdiagnostics-color -fsanitize=address -pthread -o CMakeFiles/reaction_timer.dir/src/main.c.o -c /home/lll10/ENSC351/ENSC351Work/as1/app/src/main.c",
+  "file": "/home/lll10/ENSC351/ENSC351Work/as1/app/src/main.c",
+  "output": "app/CMakeFiles/reaction_timer.dir/src/main.c.o"
+}
+]
