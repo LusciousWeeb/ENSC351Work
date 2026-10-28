@@ -1,8 +1,3 @@
-# Build the reaction timer application
-include_directories(include)
-
-
-add_executable(reaction_timer src/main.c)
-
-# Link the hardware abstraction layer
-target_link_libraries(reaction_timer PRIVATE hal)
+add_executable(light_sampler src/main.c)
+target_include_directories(light_sampler PRIVATE include)
+target_link_libraries(light_sampler PRIVATE hal)

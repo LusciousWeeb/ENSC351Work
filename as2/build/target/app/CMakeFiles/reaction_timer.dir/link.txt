@@ -1,1 +1,0 @@
-/usr/bin/aarch64-linux-gnu-gcc -fsanitize=address -pthread -Wl,--dependency-file=CMakeFiles/reaction_timer.dir/link.d CMakeFiles/reaction_timer.dir/src/main.c.o -o reaction_timer  ../hal/libhal.a

@@ -1,8 +1,0 @@
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/CMakeFiles/edit_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/CMakeFiles/rebuild_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/hal/CMakeFiles/hal.dir
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/hal/CMakeFiles/edit_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/hal/CMakeFiles/rebuild_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/app/CMakeFiles/reaction_timer.dir
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/app/CMakeFiles/edit_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as1/build/host/app/CMakeFiles/rebuild_cache.dir

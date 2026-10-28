@@ -1,3 +1,3 @@
 cmake -S . -B build/target -DCMAKE_C_COMPILER=aarch64-linux-gnu-gcc
 cmake --build build/target
-cp build/target/app/reaction_timer ~/ENSC351/public/myApps/
+cp build/target/app/light_sampler /home/lll10/ENSC351/public/myApps/

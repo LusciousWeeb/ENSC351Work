@@ -4,7 +4,7 @@
 # compile C with /usr/bin/aarch64-linux-gnu-gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/lll10/ENSC351/ENSC351Work/as1/hal/hal/include -I/home/lll10/ENSC351/ENSC351Work/as1/hal/include
+C_INCLUDES = -I/home/lll10/ENSC351/ENSC351Work/as2/hal/include
 
-C_FLAGS = -std=gnu11 -Wall -Werror -Wpedantic -Wextra -fdiagnostics-color -fsanitize=address -pthread
+C_FLAGS = -std=gnu99 -Wall -Werror -Wpedantic -Wextra -g -D_POSIX_C_SOURCE=200809L -fdiagnostics-color -fsanitize=address -pthread
 

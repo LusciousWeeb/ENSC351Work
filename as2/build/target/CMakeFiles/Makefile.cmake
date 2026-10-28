@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/lll10/ENSC351/ENSC351Work/as1/CMakeLists.txt"
-  "/home/lll10/ENSC351/ENSC351Work/as1/app/CMakeLists.txt"
+  "/home/lll10/ENSC351/ENSC351Work/as2/CMakeLists.txt"
+  "/home/lll10/ENSC351/ENSC351Work/as2/app/CMakeLists.txt"
   "CMakeFiles/3.31.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.6/CMakeSystem.cmake"
-  "/home/lll10/ENSC351/ENSC351Work/as1/hal/CMakeLists.txt"
+  "/home/lll10/ENSC351/ENSC351Work/as2/hal/CMakeLists.txt"
   "/usr/share/cmake-3.31/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.31/Modules/CMakeGenericSystem.cmake"
@@ -52,5 +52,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "hal/CMakeFiles/hal.dir/DependInfo.cmake"
-  "app/CMakeFiles/reaction_timer.dir/DependInfo.cmake"
+  "app/CMakeFiles/light_sampler.dir/DependInfo.cmake"
   )

@@ -1,5 +1,5 @@
 hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o: \
- /home/lll10/ENSC351/ENSC351Work/as1/hal/src/spi_adc_test.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/hal/src/spi_adc_test.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /usr/aarch64-linux-gnu/include/stdio.h \
  /usr/aarch64-linux-gnu/include/bits/libc-header-start.h \
@@ -22,7 +22,6 @@ hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o: \
  /usr/aarch64-linux-gnu/include/bits/types/__FILE.h \
  /usr/aarch64-linux-gnu/include/bits/types/FILE.h \
  /usr/aarch64-linux-gnu/include/bits/types/struct_FILE.h \
- /usr/aarch64-linux-gnu/include/bits/types/cookie_io_functions_t.h \
  /usr/aarch64-linux-gnu/include/bits/stdio_lim.h \
  /usr/aarch64-linux-gnu/include/bits/floatn.h \
  /usr/aarch64-linux-gnu/include/bits/floatn-common.h \

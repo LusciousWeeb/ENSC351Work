@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lll10/ENSC351/ENSC351Work/as1
+CMAKE_SOURCE_DIR = /home/lll10/ENSC351/ENSC351Work/as2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lll10/ENSC351/ENSC351Work/as1/build/target
+CMAKE_BINARY_DIR = /home/lll10/ENSC351/ENSC351Work/as2/build/target
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as1/build/target/CMakeFiles /home/lll10/ENSC351/ENSC351Work/as1/build/target//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles /home/lll10/ENSC351/ENSC351Work/as2/build/target//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as1/build/target/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,17 +130,17 @@ hal/fast:
 .PHONY : hal/fast
 
 #=============================================================================
-# Target rules for targets named reaction_timer
+# Target rules for targets named light_sampler
 
 # Build rule for target.
-reaction_timer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reaction_timer
-.PHONY : reaction_timer
+light_sampler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 light_sampler
+.PHONY : light_sampler
 
 # fast build rule for target.
-reaction_timer/fast:
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/reaction_timer.dir/build.make app/CMakeFiles/reaction_timer.dir/build
-.PHONY : reaction_timer/fast
+light_sampler/fast:
+	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/build
+.PHONY : light_sampler/fast
 
 # Help Target
 help:
@@ -151,7 +151,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hal"
-	@echo "... reaction_timer"
+	@echo "... light_sampler"
 .PHONY : help
 
 
