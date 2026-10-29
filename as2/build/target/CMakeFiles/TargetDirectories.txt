@@ -1,8 +1,8 @@
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles/edit_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles/rebuild_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/hal/CMakeFiles/hal.dir
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/hal/CMakeFiles/edit_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/hal/CMakeFiles/rebuild_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/app/CMakeFiles/light_sampler.dir
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/app/CMakeFiles/edit_cache.dir
-/home/lll10/ENSC351/ENSC351Work/as2/build/target/app/CMakeFiles/rebuild_cache.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles/edit_cache.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles/rebuild_cache.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/hal/CMakeFiles/hal.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/hal/CMakeFiles/edit_cache.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/hal/CMakeFiles/rebuild_cache.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/app/CMakeFiles/light_sampler.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/app/CMakeFiles/edit_cache.dir
+/home/randy/ensc351/ENSC351Work/as2/build/target/app/CMakeFiles/rebuild_cache.dir

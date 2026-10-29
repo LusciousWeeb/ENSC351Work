@@ -5,6 +5,11 @@ light_sampler: \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libasan_preinit.o \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libasan.so \
   CMakeFiles/light_sampler.dir/src/main.c.o \
+  CMakeFiles/light_sampler.dir/src/periodTimer.c.o \
+  CMakeFiles/light_sampler.dir/src/sampler.c.o \
+  CMakeFiles/light_sampler.dir/src/dip_detector.c.o \
+  CMakeFiles/light_sampler.dir/src/terminal_out.c.o \
+  CMakeFiles/light_sampler.dir/src/udp_server.c.o \
   ../hal/libhal.a \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libgcc_s.so \
@@ -44,6 +49,16 @@ light_sampler: \
 /usr/lib/gcc-cross/aarch64-linux-gnu/14/libasan.so:
 
 CMakeFiles/light_sampler.dir/src/main.c.o:
+
+CMakeFiles/light_sampler.dir/src/periodTimer.c.o:
+
+CMakeFiles/light_sampler.dir/src/sampler.c.o:
+
+CMakeFiles/light_sampler.dir/src/dip_detector.c.o:
+
+CMakeFiles/light_sampler.dir/src/terminal_out.c.o:
+
+CMakeFiles/light_sampler.dir/src/udp_server.c.o:
 
 ../hal/libhal.a:
 

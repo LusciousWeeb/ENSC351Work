@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lll10/ENSC351/ENSC351Work/as2
+CMAKE_SOURCE_DIR = /home/randy/ensc351/ENSC351Work/as2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lll10/ENSC351/ENSC351Work/as2/build/target
+CMAKE_BINARY_DIR = /home/randy/ensc351/ENSC351Work/as2/build/target
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles /home/lll10/ENSC351/ENSC351Work/as2/build/target/app//CMakeFiles/progress.marks
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles 0
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -E cmake_progress_start /home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles /home/randy/ensc351/ENSC351Work/as2/build/target/app//CMakeFiles/progress.marks
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 app/CMakeFiles/light_sampler.dir/rule:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/light_sampler.dir/rule
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/light_sampler.dir/rule
 .PHONY : app/CMakeFiles/light_sampler.dir/rule
 
 # Convenience name for target.
@@ -127,15 +127,39 @@ light_sampler: app/CMakeFiles/light_sampler.dir/rule
 
 # fast build rule for target.
 light_sampler/fast:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/build
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/build
 .PHONY : light_sampler/fast
+
+src/dip_detector.o: src/dip_detector.c.o
+.PHONY : src/dip_detector.o
+
+# target to build an object file
+src/dip_detector.c.o:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o
+.PHONY : src/dip_detector.c.o
+
+src/dip_detector.i: src/dip_detector.c.i
+.PHONY : src/dip_detector.i
+
+# target to preprocess a source file
+src/dip_detector.c.i:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/dip_detector.c.i
+.PHONY : src/dip_detector.c.i
+
+src/dip_detector.s: src/dip_detector.c.s
+.PHONY : src/dip_detector.s
+
+# target to generate assembly for a file
+src/dip_detector.c.s:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/dip_detector.c.s
+.PHONY : src/dip_detector.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.c.o:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/main.c.o
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -143,7 +167,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/main.c.i
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -151,8 +175,104 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/main.c.s
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/periodTimer.o: src/periodTimer.c.o
+.PHONY : src/periodTimer.o
+
+# target to build an object file
+src/periodTimer.c.o:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o
+.PHONY : src/periodTimer.c.o
+
+src/periodTimer.i: src/periodTimer.c.i
+.PHONY : src/periodTimer.i
+
+# target to preprocess a source file
+src/periodTimer.c.i:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/periodTimer.c.i
+.PHONY : src/periodTimer.c.i
+
+src/periodTimer.s: src/periodTimer.c.s
+.PHONY : src/periodTimer.s
+
+# target to generate assembly for a file
+src/periodTimer.c.s:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/periodTimer.c.s
+.PHONY : src/periodTimer.c.s
+
+src/sampler.o: src/sampler.c.o
+.PHONY : src/sampler.o
+
+# target to build an object file
+src/sampler.c.o:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/sampler.c.o
+.PHONY : src/sampler.c.o
+
+src/sampler.i: src/sampler.c.i
+.PHONY : src/sampler.i
+
+# target to preprocess a source file
+src/sampler.c.i:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/sampler.c.i
+.PHONY : src/sampler.c.i
+
+src/sampler.s: src/sampler.c.s
+.PHONY : src/sampler.s
+
+# target to generate assembly for a file
+src/sampler.c.s:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/sampler.c.s
+.PHONY : src/sampler.c.s
+
+src/terminal_out.o: src/terminal_out.c.o
+.PHONY : src/terminal_out.o
+
+# target to build an object file
+src/terminal_out.c.o:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o
+.PHONY : src/terminal_out.c.o
+
+src/terminal_out.i: src/terminal_out.c.i
+.PHONY : src/terminal_out.i
+
+# target to preprocess a source file
+src/terminal_out.c.i:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/terminal_out.c.i
+.PHONY : src/terminal_out.c.i
+
+src/terminal_out.s: src/terminal_out.c.s
+.PHONY : src/terminal_out.s
+
+# target to generate assembly for a file
+src/terminal_out.c.s:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/terminal_out.c.s
+.PHONY : src/terminal_out.c.s
+
+src/udp_server.o: src/udp_server.c.o
+.PHONY : src/udp_server.o
+
+# target to build an object file
+src/udp_server.c.o:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/udp_server.c.o
+.PHONY : src/udp_server.c.o
+
+src/udp_server.i: src/udp_server.c.i
+.PHONY : src/udp_server.i
+
+# target to preprocess a source file
+src/udp_server.c.i:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/udp_server.c.i
+.PHONY : src/udp_server.c.i
+
+src/udp_server.s: src/udp_server.c.s
+.PHONY : src/udp_server.s
+
+# target to generate assembly for a file
+src/udp_server.c.s:
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/light_sampler.dir/build.make app/CMakeFiles/light_sampler.dir/src/udp_server.c.s
+.PHONY : src/udp_server.c.s
 
 # Help Target
 help:
@@ -163,9 +283,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... light_sampler"
+	@echo "... src/dip_detector.o"
+	@echo "... src/dip_detector.i"
+	@echo "... src/dip_detector.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/periodTimer.o"
+	@echo "... src/periodTimer.i"
+	@echo "... src/periodTimer.s"
+	@echo "... src/sampler.o"
+	@echo "... src/sampler.i"
+	@echo "... src/sampler.s"
+	@echo "... src/terminal_out.o"
+	@echo "... src/terminal_out.i"
+	@echo "... src/terminal_out.s"
+	@echo "... src/udp_server.o"
+	@echo "... src/udp_server.i"
+	@echo "... src/udp_server.s"
 .PHONY : help
 
 
@@ -177,6 +312,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

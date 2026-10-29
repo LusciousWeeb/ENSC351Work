@@ -1,9 +1,8 @@
 hal/CMakeFiles/hal.dir/src/light_sensor.c.o: \
- /home/lll10/ENSC351/ENSC351Work/as2/hal/src/light_sensor.c \
+ /home/randy/ensc351/ENSC351Work/as2/hal/src/light_sensor.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
- /home/lll10/ENSC351/ENSC351Work/as2/hal/include/hal/light_sensor.h \
- /usr/aarch64-linux-gnu/include/stdio.h \
- /usr/aarch64-linux-gnu/include/bits/libc-header-start.h \
+ /home/randy/ensc351/ENSC351Work/as2/hal/include/hal/light_sensor.h \
+ /usr/aarch64-linux-gnu/include/fcntl.h \
  /usr/aarch64-linux-gnu/include/features.h \
  /usr/aarch64-linux-gnu/include/features-time64.h \
  /usr/aarch64-linux-gnu/include/bits/wordsize.h \
@@ -12,11 +11,43 @@ hal/CMakeFiles/hal.dir/src/light_sensor.c.o: \
  /usr/aarch64-linux-gnu/include/bits/long-double.h \
  /usr/aarch64-linux-gnu/include/gnu/stubs.h \
  /usr/aarch64-linux-gnu/include/gnu/stubs-lp64.h \
- /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stddef.h \
- /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdarg.h \
  /usr/aarch64-linux-gnu/include/bits/types.h \
  /usr/aarch64-linux-gnu/include/bits/typesizes.h \
  /usr/aarch64-linux-gnu/include/bits/time64.h \
+ /usr/aarch64-linux-gnu/include/bits/fcntl.h \
+ /usr/aarch64-linux-gnu/include/bits/fcntl-linux.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_timespec.h \
+ /usr/aarch64-linux-gnu/include/bits/endian.h \
+ /usr/aarch64-linux-gnu/include/bits/endianness.h \
+ /usr/aarch64-linux-gnu/include/bits/types/time_t.h \
+ /usr/aarch64-linux-gnu/include/bits/stat.h \
+ /usr/aarch64-linux-gnu/include/bits/struct_stat.h \
+ /usr/aarch64-linux-gnu/include/linux/spi/spidev.h \
+ /usr/aarch64-linux-gnu/include/linux/types.h \
+ /usr/aarch64-linux-gnu/include/asm/types.h \
+ /usr/aarch64-linux-gnu/include/asm-generic/types.h \
+ /usr/aarch64-linux-gnu/include/asm-generic/int-ll64.h \
+ /usr/aarch64-linux-gnu/include/asm/bitsperlong.h \
+ /usr/aarch64-linux-gnu/include/asm-generic/bitsperlong.h \
+ /usr/aarch64-linux-gnu/include/linux/posix_types.h \
+ /usr/aarch64-linux-gnu/include/linux/stddef.h \
+ /usr/aarch64-linux-gnu/include/asm/posix_types.h \
+ /usr/aarch64-linux-gnu/include/asm-generic/posix_types.h \
+ /usr/aarch64-linux-gnu/include/linux/ioctl.h \
+ /usr/aarch64-linux-gnu/include/asm/ioctl.h \
+ /usr/aarch64-linux-gnu/include/asm-generic/ioctl.h \
+ /usr/aarch64-linux-gnu/include/linux/spi/spi.h \
+ /usr/aarch64-linux-gnu/include/linux/const.h \
+ /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdint.h \
+ /usr/aarch64-linux-gnu/include/stdint.h \
+ /usr/aarch64-linux-gnu/include/bits/libc-header-start.h \
+ /usr/aarch64-linux-gnu/include/bits/wchar.h \
+ /usr/aarch64-linux-gnu/include/bits/stdint-intn.h \
+ /usr/aarch64-linux-gnu/include/bits/stdint-uintn.h \
+ /usr/aarch64-linux-gnu/include/bits/stdint-least.h \
+ /usr/aarch64-linux-gnu/include/stdio.h \
+ /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stddef.h \
+ /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdarg.h \
  /usr/aarch64-linux-gnu/include/bits/types/__fpos_t.h \
  /usr/aarch64-linux-gnu/include/bits/types/__mbstate_t.h \
  /usr/aarch64-linux-gnu/include/bits/types/__fpos64_t.h \
@@ -30,4 +61,16 @@ hal/CMakeFiles/hal.dir/src/light_sensor.c.o: \
  /usr/aarch64-linux-gnu/include/bits/waitflags.h \
  /usr/aarch64-linux-gnu/include/bits/waitstatus.h \
  /usr/aarch64-linux-gnu/include/bits/stdlib-float.h \
- /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdbool.h
+ /usr/aarch64-linux-gnu/include/sys/ioctl.h \
+ /usr/aarch64-linux-gnu/include/bits/ioctls.h \
+ /usr/aarch64-linux-gnu/include/asm/ioctls.h \
+ /usr/aarch64-linux-gnu/include/asm-generic/ioctls.h \
+ /usr/aarch64-linux-gnu/include/bits/ioctl-types.h \
+ /usr/aarch64-linux-gnu/include/sys/ttydefaults.h \
+ /usr/aarch64-linux-gnu/include/unistd.h \
+ /usr/aarch64-linux-gnu/include/bits/posix_opt.h \
+ /usr/aarch64-linux-gnu/include/bits/environments.h \
+ /usr/aarch64-linux-gnu/include/bits/confname.h \
+ /usr/aarch64-linux-gnu/include/bits/getopt_posix.h \
+ /usr/aarch64-linux-gnu/include/bits/getopt_core.h \
+ /usr/aarch64-linux-gnu/include/bits/unistd_ext.h

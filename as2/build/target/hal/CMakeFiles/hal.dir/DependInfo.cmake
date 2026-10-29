@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lll10/ENSC351/ENSC351Work/as2/hal/src/led.c" "hal/CMakeFiles/hal.dir/src/led.c.o" "gcc" "hal/CMakeFiles/hal.dir/src/led.c.o.d"
-  "/home/lll10/ENSC351/ENSC351Work/as2/hal/src/light_sensor.c" "hal/CMakeFiles/hal.dir/src/light_sensor.c.o" "gcc" "hal/CMakeFiles/hal.dir/src/light_sensor.c.o.d"
-  "/home/lll10/ENSC351/ENSC351Work/as2/hal/src/spi_adc_test.c" "hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o" "gcc" "hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/hal/src/led.c" "hal/CMakeFiles/hal.dir/src/led.c.o" "gcc" "hal/CMakeFiles/hal.dir/src/led.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/hal/src/light_sensor.c" "hal/CMakeFiles/hal.dir/src/light_sensor.c.o" "gcc" "hal/CMakeFiles/hal.dir/src/light_sensor.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/hal/src/spi_adc_test.c" "hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o" "gcc" "hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

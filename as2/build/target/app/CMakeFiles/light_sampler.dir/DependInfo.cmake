@@ -8,7 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lll10/ENSC351/ENSC351Work/as2/app/src/main.c" "app/CMakeFiles/light_sampler.dir/src/main.c.o" "gcc" "app/CMakeFiles/light_sampler.dir/src/main.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/app/src/dip_detector.c" "app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o" "gcc" "app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/app/src/main.c" "app/CMakeFiles/light_sampler.dir/src/main.c.o" "gcc" "app/CMakeFiles/light_sampler.dir/src/main.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/app/src/periodTimer.c" "app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o" "gcc" "app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/app/src/sampler.c" "app/CMakeFiles/light_sampler.dir/src/sampler.c.o" "gcc" "app/CMakeFiles/light_sampler.dir/src/sampler.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/app/src/terminal_out.c" "app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o" "gcc" "app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o.d"
+  "/home/randy/ensc351/ENSC351Work/as2/app/src/udp_server.c" "app/CMakeFiles/light_sampler.dir/src/udp_server.c.o" "gcc" "app/CMakeFiles/light_sampler.dir/src/udp_server.c.o.d"
   "" "app/light_sampler" "gcc" "app/CMakeFiles/light_sampler.dir/link.d"
   )
 

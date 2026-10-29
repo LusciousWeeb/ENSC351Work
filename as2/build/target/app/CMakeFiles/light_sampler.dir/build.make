@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lll10/ENSC351/ENSC351Work/as2
+CMAKE_SOURCE_DIR = /home/randy/ensc351/ENSC351Work/as2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lll10/ENSC351/ENSC351Work/as2/build/target
+CMAKE_BINARY_DIR = /home/randy/ensc351/ENSC351Work/as2/build/target
 
 # Include any dependencies generated for this target.
 include app/CMakeFiles/light_sampler.dir/depend.make
@@ -73,43 +73,123 @@ app/CMakeFiles/light_sampler.dir/codegen:
 .PHONY : app/CMakeFiles/light_sampler.dir/codegen
 
 app/CMakeFiles/light_sampler.dir/src/main.c.o: app/CMakeFiles/light_sampler.dir/flags.make
-app/CMakeFiles/light_sampler.dir/src/main.c.o: /home/lll10/ENSC351/ENSC351Work/as2/app/src/main.c
+app/CMakeFiles/light_sampler.dir/src/main.c.o: /home/randy/ensc351/ENSC351Work/as2/app/src/main.c
 app/CMakeFiles/light_sampler.dir/src/main.c.o: app/CMakeFiles/light_sampler.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/CMakeFiles/light_sampler.dir/src/main.c.o"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT app/CMakeFiles/light_sampler.dir/src/main.c.o -MF CMakeFiles/light_sampler.dir/src/main.c.o.d -o CMakeFiles/light_sampler.dir/src/main.c.o -c /home/lll10/ENSC351/ENSC351Work/as2/app/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/CMakeFiles/light_sampler.dir/src/main.c.o"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT app/CMakeFiles/light_sampler.dir/src/main.c.o -MF CMakeFiles/light_sampler.dir/src/main.c.o.d -o CMakeFiles/light_sampler.dir/src/main.c.o -c /home/randy/ensc351/ENSC351Work/as2/app/src/main.c
 
 app/CMakeFiles/light_sampler.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/light_sampler.dir/src/main.c.i"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lll10/ENSC351/ENSC351Work/as2/app/src/main.c > CMakeFiles/light_sampler.dir/src/main.c.i
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/randy/ensc351/ENSC351Work/as2/app/src/main.c > CMakeFiles/light_sampler.dir/src/main.c.i
 
 app/CMakeFiles/light_sampler.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/light_sampler.dir/src/main.c.s"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lll10/ENSC351/ENSC351Work/as2/app/src/main.c -o CMakeFiles/light_sampler.dir/src/main.c.s
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/randy/ensc351/ENSC351Work/as2/app/src/main.c -o CMakeFiles/light_sampler.dir/src/main.c.s
+
+app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o: app/CMakeFiles/light_sampler.dir/flags.make
+app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o: /home/randy/ensc351/ENSC351Work/as2/app/src/periodTimer.c
+app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o: app/CMakeFiles/light_sampler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o -MF CMakeFiles/light_sampler.dir/src/periodTimer.c.o.d -o CMakeFiles/light_sampler.dir/src/periodTimer.c.o -c /home/randy/ensc351/ENSC351Work/as2/app/src/periodTimer.c
+
+app/CMakeFiles/light_sampler.dir/src/periodTimer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/light_sampler.dir/src/periodTimer.c.i"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/randy/ensc351/ENSC351Work/as2/app/src/periodTimer.c > CMakeFiles/light_sampler.dir/src/periodTimer.c.i
+
+app/CMakeFiles/light_sampler.dir/src/periodTimer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/light_sampler.dir/src/periodTimer.c.s"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/randy/ensc351/ENSC351Work/as2/app/src/periodTimer.c -o CMakeFiles/light_sampler.dir/src/periodTimer.c.s
+
+app/CMakeFiles/light_sampler.dir/src/sampler.c.o: app/CMakeFiles/light_sampler.dir/flags.make
+app/CMakeFiles/light_sampler.dir/src/sampler.c.o: /home/randy/ensc351/ENSC351Work/as2/app/src/sampler.c
+app/CMakeFiles/light_sampler.dir/src/sampler.c.o: app/CMakeFiles/light_sampler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object app/CMakeFiles/light_sampler.dir/src/sampler.c.o"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT app/CMakeFiles/light_sampler.dir/src/sampler.c.o -MF CMakeFiles/light_sampler.dir/src/sampler.c.o.d -o CMakeFiles/light_sampler.dir/src/sampler.c.o -c /home/randy/ensc351/ENSC351Work/as2/app/src/sampler.c
+
+app/CMakeFiles/light_sampler.dir/src/sampler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/light_sampler.dir/src/sampler.c.i"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/randy/ensc351/ENSC351Work/as2/app/src/sampler.c > CMakeFiles/light_sampler.dir/src/sampler.c.i
+
+app/CMakeFiles/light_sampler.dir/src/sampler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/light_sampler.dir/src/sampler.c.s"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/randy/ensc351/ENSC351Work/as2/app/src/sampler.c -o CMakeFiles/light_sampler.dir/src/sampler.c.s
+
+app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o: app/CMakeFiles/light_sampler.dir/flags.make
+app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o: /home/randy/ensc351/ENSC351Work/as2/app/src/dip_detector.c
+app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o: app/CMakeFiles/light_sampler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o -MF CMakeFiles/light_sampler.dir/src/dip_detector.c.o.d -o CMakeFiles/light_sampler.dir/src/dip_detector.c.o -c /home/randy/ensc351/ENSC351Work/as2/app/src/dip_detector.c
+
+app/CMakeFiles/light_sampler.dir/src/dip_detector.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/light_sampler.dir/src/dip_detector.c.i"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/randy/ensc351/ENSC351Work/as2/app/src/dip_detector.c > CMakeFiles/light_sampler.dir/src/dip_detector.c.i
+
+app/CMakeFiles/light_sampler.dir/src/dip_detector.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/light_sampler.dir/src/dip_detector.c.s"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/randy/ensc351/ENSC351Work/as2/app/src/dip_detector.c -o CMakeFiles/light_sampler.dir/src/dip_detector.c.s
+
+app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o: app/CMakeFiles/light_sampler.dir/flags.make
+app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o: /home/randy/ensc351/ENSC351Work/as2/app/src/terminal_out.c
+app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o: app/CMakeFiles/light_sampler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o -MF CMakeFiles/light_sampler.dir/src/terminal_out.c.o.d -o CMakeFiles/light_sampler.dir/src/terminal_out.c.o -c /home/randy/ensc351/ENSC351Work/as2/app/src/terminal_out.c
+
+app/CMakeFiles/light_sampler.dir/src/terminal_out.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/light_sampler.dir/src/terminal_out.c.i"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/randy/ensc351/ENSC351Work/as2/app/src/terminal_out.c > CMakeFiles/light_sampler.dir/src/terminal_out.c.i
+
+app/CMakeFiles/light_sampler.dir/src/terminal_out.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/light_sampler.dir/src/terminal_out.c.s"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/randy/ensc351/ENSC351Work/as2/app/src/terminal_out.c -o CMakeFiles/light_sampler.dir/src/terminal_out.c.s
+
+app/CMakeFiles/light_sampler.dir/src/udp_server.c.o: app/CMakeFiles/light_sampler.dir/flags.make
+app/CMakeFiles/light_sampler.dir/src/udp_server.c.o: /home/randy/ensc351/ENSC351Work/as2/app/src/udp_server.c
+app/CMakeFiles/light_sampler.dir/src/udp_server.c.o: app/CMakeFiles/light_sampler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object app/CMakeFiles/light_sampler.dir/src/udp_server.c.o"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT app/CMakeFiles/light_sampler.dir/src/udp_server.c.o -MF CMakeFiles/light_sampler.dir/src/udp_server.c.o.d -o CMakeFiles/light_sampler.dir/src/udp_server.c.o -c /home/randy/ensc351/ENSC351Work/as2/app/src/udp_server.c
+
+app/CMakeFiles/light_sampler.dir/src/udp_server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/light_sampler.dir/src/udp_server.c.i"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/randy/ensc351/ENSC351Work/as2/app/src/udp_server.c > CMakeFiles/light_sampler.dir/src/udp_server.c.i
+
+app/CMakeFiles/light_sampler.dir/src/udp_server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/light_sampler.dir/src/udp_server.c.s"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/randy/ensc351/ENSC351Work/as2/app/src/udp_server.c -o CMakeFiles/light_sampler.dir/src/udp_server.c.s
 
 # Object files for target light_sampler
 light_sampler_OBJECTS = \
-"CMakeFiles/light_sampler.dir/src/main.c.o"
+"CMakeFiles/light_sampler.dir/src/main.c.o" \
+"CMakeFiles/light_sampler.dir/src/periodTimer.c.o" \
+"CMakeFiles/light_sampler.dir/src/sampler.c.o" \
+"CMakeFiles/light_sampler.dir/src/dip_detector.c.o" \
+"CMakeFiles/light_sampler.dir/src/terminal_out.c.o" \
+"CMakeFiles/light_sampler.dir/src/udp_server.c.o"
 
 # External object files for target light_sampler
 light_sampler_EXTERNAL_OBJECTS =
 
 app/light_sampler: app/CMakeFiles/light_sampler.dir/src/main.c.o
+app/light_sampler: app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o
+app/light_sampler: app/CMakeFiles/light_sampler.dir/src/sampler.c.o
+app/light_sampler: app/CMakeFiles/light_sampler.dir/src/dip_detector.c.o
+app/light_sampler: app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o
+app/light_sampler: app/CMakeFiles/light_sampler.dir/src/udp_server.c.o
 app/light_sampler: app/CMakeFiles/light_sampler.dir/build.make
 app/light_sampler: app/CMakeFiles/light_sampler.dir/compiler_depend.ts
 app/light_sampler: hal/libhal.a
 app/light_sampler: app/CMakeFiles/light_sampler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable light_sampler"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/light_sampler.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable light_sampler"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/light_sampler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 app/CMakeFiles/light_sampler.dir/build: app/light_sampler
 .PHONY : app/CMakeFiles/light_sampler.dir/build
 
 app/CMakeFiles/light_sampler.dir/clean:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/app && $(CMAKE_COMMAND) -P CMakeFiles/light_sampler.dir/cmake_clean.cmake
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target/app && $(CMAKE_COMMAND) -P CMakeFiles/light_sampler.dir/cmake_clean.cmake
 .PHONY : app/CMakeFiles/light_sampler.dir/clean
 
 app/CMakeFiles/light_sampler.dir/depend:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lll10/ENSC351/ENSC351Work/as2 /home/lll10/ENSC351/ENSC351Work/as2/app /home/lll10/ENSC351/ENSC351Work/as2/build/target /home/lll10/ENSC351/ENSC351Work/as2/build/target/app /home/lll10/ENSC351/ENSC351Work/as2/build/target/app/CMakeFiles/light_sampler.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/randy/ensc351/ENSC351Work/as2 /home/randy/ensc351/ENSC351Work/as2/app /home/randy/ensc351/ENSC351Work/as2/build/target /home/randy/ensc351/ENSC351Work/as2/build/target/app /home/randy/ensc351/ENSC351Work/as2/build/target/app/CMakeFiles/light_sampler.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : app/CMakeFiles/light_sampler.dir/depend
 

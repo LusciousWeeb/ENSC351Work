@@ -1,5 +1,5 @@
 app/CMakeFiles/light_sampler.dir/src/main.c.o: \
- /home/lll10/ENSC351/ENSC351Work/as2/app/src/main.c \
+ /home/randy/ensc351/ENSC351Work/as2/app/src/main.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /usr/aarch64-linux-gnu/include/stdio.h \
  /usr/aarch64-linux-gnu/include/bits/libc-header-start.h \
@@ -25,24 +25,9 @@ app/CMakeFiles/light_sampler.dir/src/main.c.o: \
  /usr/aarch64-linux-gnu/include/bits/stdio_lim.h \
  /usr/aarch64-linux-gnu/include/bits/floatn.h \
  /usr/aarch64-linux-gnu/include/bits/floatn-common.h \
- /usr/aarch64-linux-gnu/include/time.h \
- /usr/aarch64-linux-gnu/include/bits/time.h \
- /usr/aarch64-linux-gnu/include/bits/types/clock_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/time_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/struct_tm.h \
- /usr/aarch64-linux-gnu/include/bits/types/struct_timespec.h \
- /usr/aarch64-linux-gnu/include/bits/endian.h \
- /usr/aarch64-linux-gnu/include/bits/endianness.h \
- /usr/aarch64-linux-gnu/include/bits/types/clockid_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/timer_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/struct_itimerspec.h \
- /usr/aarch64-linux-gnu/include/bits/types/locale_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/__locale_t.h \
- /usr/aarch64-linux-gnu/include/unistd.h \
- /usr/aarch64-linux-gnu/include/bits/posix_opt.h \
- /usr/aarch64-linux-gnu/include/bits/environments.h \
- /usr/aarch64-linux-gnu/include/bits/confname.h \
- /usr/aarch64-linux-gnu/include/bits/getopt_posix.h \
- /usr/aarch64-linux-gnu/include/bits/getopt_core.h \
- /usr/aarch64-linux-gnu/include/bits/unistd_ext.h \
- /home/lll10/ENSC351/ENSC351Work/as2/hal/include/hal/light_sensor.h
+ /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h \
+ /home/randy/ensc351/ENSC351Work/as2/app/include/sampler.h \
+ /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdbool.h \
+ /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h \
+ /home/randy/ensc351/ENSC351Work/as2/app/include/terminal_out.h \
+ /home/randy/ensc351/ENSC351Work/as2/app/include/udp_server.h
