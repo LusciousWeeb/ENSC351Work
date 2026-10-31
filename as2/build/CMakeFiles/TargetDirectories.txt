@@ -1,8 +1,0 @@
-/home/randy/ensc351/ENSC351Work/as2/build/CMakeFiles/edit_cache.dir
-/home/randy/ensc351/ENSC351Work/as2/build/CMakeFiles/rebuild_cache.dir
-/home/randy/ensc351/ENSC351Work/as2/build/hal/CMakeFiles/hal.dir
-/home/randy/ensc351/ENSC351Work/as2/build/hal/CMakeFiles/edit_cache.dir
-/home/randy/ensc351/ENSC351Work/as2/build/hal/CMakeFiles/rebuild_cache.dir
-/home/randy/ensc351/ENSC351Work/as2/build/app/CMakeFiles/light_sampler.dir
-/home/randy/ensc351/ENSC351Work/as2/build/app/CMakeFiles/edit_cache.dir
-/home/randy/ensc351/ENSC351Work/as2/build/app/CMakeFiles/rebuild_cache.dir

@@ -155,29 +155,31 @@ void PwmLed_init(void)
         exit(EXIT_FAILURE);
     }
 
-    // Start with the LED off.
-    if (!writeValue("duty_cycle", 0) || !writeValue("enable", 0)) {
-        fprintf(stderr, "ERROR: Unable to configure the PWM LED.\n");
-        exit(EXIT_FAILURE);
-    }
+    // Start with the LED off. A freshly exported PWM has period 0, and the
+    // kernel rejects every write until the period is non-zero, so set it
+    // first. Using the largest period means any leftover duty_cycle from a
+    // previous run still fits under it.
+    if (!writeValue("period", MAX_HW_PERIOD_NS)
+        || !writeValue("duty_cycle", 0)
+        || !writeValue("enable", 0)) {
 
-    pthread_condattr_t attr;
-    pthread_condattr_init(&attr);
-    pthread_condattr_setclock(&attr, CLOCK_MONOTONIC);
-    pthread_cond_init(&s_cond, &attr);
-    pthread_condattr_destroy(&attr);
+        pthread_condattr_t attr;
+        pthread_condattr_init(&attr);
+        pthread_condattr_setclock(&attr, CLOCK_MONOTONIC);
+        pthread_cond_init(&s_cond, &attr);
+        pthread_condattr_destroy(&attr);
 
-    s_hz = 0;
-    s_slowHz = 0;
-    s_isRunning = true;
-    s_isInitialized = true;
+        s_hz = 0;
+        s_slowHz = 0;
+        s_isRunning = true;
+        s_isInitialized = true;
 
-    if (pthread_create(&s_thread, NULL, slowBlinkThread, NULL) != 0) {
-        perror("ERROR: PwmLed: unable to create thread");
-        exit(EXIT_FAILURE);
+        if (pthread_create(&s_thread, NULL, slowBlinkThread, NULL) != 0) {
+            perror("ERROR: PwmLed: unable to create thread");
+            exit(EXIT_FAILURE);
+        }
     }
 }
-
 void PwmLed_cleanup(void)
 {
     if (!s_isInitialized) {

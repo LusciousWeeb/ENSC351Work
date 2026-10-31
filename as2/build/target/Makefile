@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/randy/ensc351/ENSC351Work/as2
+CMAKE_SOURCE_DIR = /home/lll10/ENSC351/ENSC351Work/as2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/randy/ensc351/ENSC351Work/as2/build/target
+CMAKE_BINARY_DIR = /home/lll10/ENSC351/ENSC351Work/as2/build/target
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles /home/randy/ensc351/ENSC351Work/as2/build/target//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles /home/lll10/ENSC351/ENSC351Work/as2/build/target//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

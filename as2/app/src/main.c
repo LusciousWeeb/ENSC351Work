@@ -6,6 +6,7 @@
 #include "sampler.h"
 #include "terminal_out.h"
 #include "udp_server.h"
+#include "led_control.h"
  
 int main(void)
 {
@@ -15,13 +16,15 @@ int main(void)
     Sampler_init();
     TerminalOut_init();
     UdpServer_init();
+    LedControl_init();
  
-    TerminalOut_setFlashHz(10);     // later: set by the rotary encoder code
+    // TerminalOut_setFlashHz(10);     // later: set by the rotary encoder code
  
     UdpServer_waitForStop();        // returns after a "stop" command
  
     // Shut down in reverse order.
     UdpServer_cleanup();
+    LedControl_cleanup();
     TerminalOut_cleanup();
     Sampler_cleanup();
     Period_cleanup();

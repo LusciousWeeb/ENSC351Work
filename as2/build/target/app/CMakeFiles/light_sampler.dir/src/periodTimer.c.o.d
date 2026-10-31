@@ -1,5 +1,5 @@
 app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o: \
- /home/randy/ensc351/ENSC351Work/as2/app/src/periodTimer.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/src/periodTimer.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /usr/aarch64-linux-gnu/include/assert.h \
  /usr/aarch64-linux-gnu/include/features.h \
@@ -55,4 +55,4 @@ app/CMakeFiles/light_sampler.dir/src/periodTimer.c.o: \
  /usr/aarch64-linux-gnu/include/bits/floatn-common.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdbool.h \
  /usr/aarch64-linux-gnu/include/string.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h

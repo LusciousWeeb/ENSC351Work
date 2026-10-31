@@ -1,7 +1,7 @@
 app/CMakeFiles/light_sampler.dir/src/udp_server.c.o: \
- /home/randy/ensc351/ENSC351Work/as2/app/src/udp_server.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/src/udp_server.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/udp_server.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/udp_server.h \
  /usr/aarch64-linux-gnu/include/arpa/inet.h \
  /usr/aarch64-linux-gnu/include/features.h \
  /usr/aarch64-linux-gnu/include/features-time64.h \
@@ -85,5 +85,5 @@ app/CMakeFiles/light_sampler.dir/src/udp_server.c.o: \
  /usr/aarch64-linux-gnu/include/bits/getopt_posix.h \
  /usr/aarch64-linux-gnu/include/bits/getopt_core.h \
  /usr/aarch64-linux-gnu/include/bits/unistd_ext.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/sampler.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/sampler.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h

@@ -1,5 +1,5 @@
 hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o: \
- /home/randy/ensc351/ENSC351Work/as2/hal/src/spi_adc_test.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/hal/src/spi_adc_test.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /usr/aarch64-linux-gnu/include/stdio.h \
  /usr/aarch64-linux-gnu/include/bits/libc-header-start.h \

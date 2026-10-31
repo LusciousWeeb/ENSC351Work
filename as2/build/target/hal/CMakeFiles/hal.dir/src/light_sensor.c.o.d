@@ -1,7 +1,7 @@
 hal/CMakeFiles/hal.dir/src/light_sensor.c.o: \
- /home/randy/ensc351/ENSC351Work/as2/hal/src/light_sensor.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/hal/src/light_sensor.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
- /home/randy/ensc351/ENSC351Work/as2/hal/include/hal/light_sensor.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/hal/include/hal/light_sensor.h \
  /usr/aarch64-linux-gnu/include/fcntl.h \
  /usr/aarch64-linux-gnu/include/features.h \
  /usr/aarch64-linux-gnu/include/features-time64.h \

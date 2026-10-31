@@ -10,7 +10,9 @@ light_sampler: \
   CMakeFiles/light_sampler.dir/src/dip_detector.c.o \
   CMakeFiles/light_sampler.dir/src/terminal_out.c.o \
   CMakeFiles/light_sampler.dir/src/udp_server.c.o \
+  CMakeFiles/light_sampler.dir/src/led_control.c.o \
   ../hal/libhal.a \
+  /usr/lib/aarch64-linux-gnu/libgpiod.a \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libgcc_s.so \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libgcc_s.so \
@@ -32,11 +34,8 @@ light_sampler: \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/crtendS.o \
   /usr/lib/gcc-cross/aarch64-linux-gnu/14/../../../../aarch64-linux-gnu/lib/../lib/crtn.o \
-  /lib/x86_64-linux-gnu/libm.so.6 \
-  /usr/lib/x86_64-linux-gnu/libm.so.6 \
-  /usr/aarch64-linux-gnu/lib/libm.so.6 \
-  /usr/lib/gcc-cross/aarch64-linux-gnu/14/../../../../aarch64-linux-gnu/lib/../lib/libgcc_s.so.1 \
-  /usr/aarch64-linux-gnu/lib/ld-linux-aarch64.so.1
+  /lib/aarch64-linux-gnu/libm.so.6 \
+  /usr/lib/gcc-cross/aarch64-linux-gnu/14/../../../../aarch64-linux-gnu/lib/../lib/libgcc_s.so.1
 
 /usr/lib/gcc-cross/aarch64-linux-gnu/14/../../../../aarch64-linux-gnu/lib/../lib/Scrt1.o:
 
@@ -60,7 +59,11 @@ CMakeFiles/light_sampler.dir/src/terminal_out.c.o:
 
 CMakeFiles/light_sampler.dir/src/udp_server.c.o:
 
+CMakeFiles/light_sampler.dir/src/led_control.c.o:
+
 ../hal/libhal.a:
+
+/usr/lib/aarch64-linux-gnu/libgpiod.a:
 
 /usr/lib/gcc-cross/aarch64-linux-gnu/14/libgcc.a:
 
@@ -104,12 +107,6 @@ CMakeFiles/light_sampler.dir/src/udp_server.c.o:
 
 /usr/lib/gcc-cross/aarch64-linux-gnu/14/../../../../aarch64-linux-gnu/lib/../lib/crtn.o:
 
-/lib/x86_64-linux-gnu/libm.so.6:
-
-/usr/lib/x86_64-linux-gnu/libm.so.6:
-
-/usr/aarch64-linux-gnu/lib/libm.so.6:
+/lib/aarch64-linux-gnu/libm.so.6:
 
 /usr/lib/gcc-cross/aarch64-linux-gnu/14/../../../../aarch64-linux-gnu/lib/../lib/libgcc_s.so.1:
-
-/usr/aarch64-linux-gnu/lib/ld-linux-aarch64.so.1:

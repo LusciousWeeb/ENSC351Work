@@ -30,8 +30,8 @@
 #include <unistd.h>
 
 // Header-pin line names (see above). The first name found is used.
-static const char *const ENCODER_A_NAMES[] = { "hat-36-gpio", "hat-36-gpio-pu", NULL };
-static const char *const ENCODER_B_NAMES[] = { "hat-11-gpio", "hat-11-gpio-pu", NULL };
+static const char *const ENCODER_A_NAMES[] = { "GPIO5", NULL };
+static const char *const ENCODER_B_NAMES[] = { "GPIO6", NULL };
 
 // If turning the knob clockwise lowers the frequency, set this to 1.
 #define ROTARY_ENCODER_REVERSE_DIRECTION 0

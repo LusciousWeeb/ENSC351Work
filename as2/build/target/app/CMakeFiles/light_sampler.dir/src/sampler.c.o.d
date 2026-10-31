@@ -1,9 +1,9 @@
 app/CMakeFiles/light_sampler.dir/src/sampler.c.o: \
- /home/randy/ensc351/ENSC351Work/as2/app/src/sampler.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/src/sampler.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/sampler.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/sampler.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdbool.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h \
  /usr/aarch64-linux-gnu/include/assert.h \
  /usr/aarch64-linux-gnu/include/features.h \
  /usr/aarch64-linux-gnu/include/features-time64.h \
@@ -61,6 +61,6 @@ app/CMakeFiles/light_sampler.dir/src/sampler.c.o: \
  /usr/aarch64-linux-gnu/include/bits/waitstatus.h \
  /usr/aarch64-linux-gnu/include/bits/stdlib-float.h \
  /usr/aarch64-linux-gnu/include/string.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/dip_detector.h \
- /home/randy/ensc351/ENSC351Work/as2/hal/include/hal/light_sensor.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/dip_detector.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/hal/include/hal/light_sensor.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h

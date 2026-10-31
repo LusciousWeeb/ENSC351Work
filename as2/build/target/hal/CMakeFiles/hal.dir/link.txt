@@ -1,2 +1,2 @@
-/usr/bin/aarch64-linux-gnu-ar qc libhal.a CMakeFiles/hal.dir/src/led.c.o CMakeFiles/hal.dir/src/light_sensor.c.o CMakeFiles/hal.dir/src/spi_adc_test.c.o
+/usr/bin/aarch64-linux-gnu-ar qc libhal.a CMakeFiles/hal.dir/src/led.c.o CMakeFiles/hal.dir/src/light_sensor.c.o CMakeFiles/hal.dir/src/pwm_led.c.o CMakeFiles/hal.dir/src/rotary_encoder.c.o CMakeFiles/hal.dir/src/spi_adc_test.c.o
 /usr/bin/aarch64-linux-gnu-ranlib libhal.a

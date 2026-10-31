@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/randy/ensc351/ENSC351Work/as2
+CMAKE_SOURCE_DIR = /home/lll10/ENSC351/ENSC351Work/as2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/randy/ensc351/ENSC351Work/as2/build/target
+CMAKE_BINARY_DIR = /home/lll10/ENSC351/ENSC351Work/as2/build/target
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -E cmake_progress_start /home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles /home/randy/ensc351/ENSC351Work/as2/build/target/hal//CMakeFiles/progress.marks
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/randy/ensc351/ENSC351Work/as2/build/target/CMakeFiles 0
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal//CMakeFiles/progress.marks
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/clean
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 hal/CMakeFiles/hal.dir/rule:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/CMakeFiles/hal.dir/rule
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/CMakeFiles/hal.dir/rule
 .PHONY : hal/CMakeFiles/hal.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ hal: hal/CMakeFiles/hal.dir/rule
 
 # fast build rule for target.
 hal/fast:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/build
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/build
 .PHONY : hal/fast
 
 src/led.o: src/led.c.o
@@ -135,7 +135,7 @@ src/led.o: src/led.c.o
 
 # target to build an object file
 src/led.c.o:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.o
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.o
 .PHONY : src/led.c.o
 
 src/led.i: src/led.c.i
@@ -143,7 +143,7 @@ src/led.i: src/led.c.i
 
 # target to preprocess a source file
 src/led.c.i:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.i
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.i
 .PHONY : src/led.c.i
 
 src/led.s: src/led.c.s
@@ -151,7 +151,7 @@ src/led.s: src/led.c.s
 
 # target to generate assembly for a file
 src/led.c.s:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.s
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.s
 .PHONY : src/led.c.s
 
 src/light_sensor.o: src/light_sensor.c.o
@@ -159,7 +159,7 @@ src/light_sensor.o: src/light_sensor.c.o
 
 # target to build an object file
 src/light_sensor.c.o:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/light_sensor.c.o
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/light_sensor.c.o
 .PHONY : src/light_sensor.c.o
 
 src/light_sensor.i: src/light_sensor.c.i
@@ -167,7 +167,7 @@ src/light_sensor.i: src/light_sensor.c.i
 
 # target to preprocess a source file
 src/light_sensor.c.i:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/light_sensor.c.i
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/light_sensor.c.i
 .PHONY : src/light_sensor.c.i
 
 src/light_sensor.s: src/light_sensor.c.s
@@ -175,15 +175,63 @@ src/light_sensor.s: src/light_sensor.c.s
 
 # target to generate assembly for a file
 src/light_sensor.c.s:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/light_sensor.c.s
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/light_sensor.c.s
 .PHONY : src/light_sensor.c.s
+
+src/pwm_led.o: src/pwm_led.c.o
+.PHONY : src/pwm_led.o
+
+# target to build an object file
+src/pwm_led.c.o:
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/pwm_led.c.o
+.PHONY : src/pwm_led.c.o
+
+src/pwm_led.i: src/pwm_led.c.i
+.PHONY : src/pwm_led.i
+
+# target to preprocess a source file
+src/pwm_led.c.i:
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/pwm_led.c.i
+.PHONY : src/pwm_led.c.i
+
+src/pwm_led.s: src/pwm_led.c.s
+.PHONY : src/pwm_led.s
+
+# target to generate assembly for a file
+src/pwm_led.c.s:
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/pwm_led.c.s
+.PHONY : src/pwm_led.c.s
+
+src/rotary_encoder.o: src/rotary_encoder.c.o
+.PHONY : src/rotary_encoder.o
+
+# target to build an object file
+src/rotary_encoder.c.o:
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o
+.PHONY : src/rotary_encoder.c.o
+
+src/rotary_encoder.i: src/rotary_encoder.c.i
+.PHONY : src/rotary_encoder.i
+
+# target to preprocess a source file
+src/rotary_encoder.c.i:
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/rotary_encoder.c.i
+.PHONY : src/rotary_encoder.c.i
+
+src/rotary_encoder.s: src/rotary_encoder.c.s
+.PHONY : src/rotary_encoder.s
+
+# target to generate assembly for a file
+src/rotary_encoder.c.s:
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/rotary_encoder.c.s
+.PHONY : src/rotary_encoder.c.s
 
 src/spi_adc_test.o: src/spi_adc_test.c.o
 .PHONY : src/spi_adc_test.o
 
 # target to build an object file
 src/spi_adc_test.c.o:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o
 .PHONY : src/spi_adc_test.c.o
 
 src/spi_adc_test.i: src/spi_adc_test.c.i
@@ -191,7 +239,7 @@ src/spi_adc_test.i: src/spi_adc_test.c.i
 
 # target to preprocess a source file
 src/spi_adc_test.c.i:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.i
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.i
 .PHONY : src/spi_adc_test.c.i
 
 src/spi_adc_test.s: src/spi_adc_test.c.s
@@ -199,7 +247,7 @@ src/spi_adc_test.s: src/spi_adc_test.c.s
 
 # target to generate assembly for a file
 src/spi_adc_test.c.s:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.s
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.s
 .PHONY : src/spi_adc_test.c.s
 
 # Help Target
@@ -217,6 +265,12 @@ help:
 	@echo "... src/light_sensor.o"
 	@echo "... src/light_sensor.i"
 	@echo "... src/light_sensor.s"
+	@echo "... src/pwm_led.o"
+	@echo "... src/pwm_led.i"
+	@echo "... src/pwm_led.s"
+	@echo "... src/rotary_encoder.o"
+	@echo "... src/rotary_encoder.i"
+	@echo "... src/rotary_encoder.s"
 	@echo "... src/spi_adc_test.o"
 	@echo "... src/spi_adc_test.i"
 	@echo "... src/spi_adc_test.s"
@@ -231,6 +285,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/randy/ensc351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

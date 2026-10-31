@@ -1,7 +1,7 @@
 app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o: \
- /home/randy/ensc351/ENSC351Work/as2/app/src/terminal_out.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/src/terminal_out.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/terminal_out.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/terminal_out.h \
  /usr/aarch64-linux-gnu/include/assert.h \
  /usr/aarch64-linux-gnu/include/features.h \
  /usr/aarch64-linux-gnu/include/features-time64.h \
@@ -59,6 +59,6 @@ app/CMakeFiles/light_sampler.dir/src/terminal_out.c.o: \
  /usr/aarch64-linux-gnu/include/bits/waitflags.h \
  /usr/aarch64-linux-gnu/include/bits/waitstatus.h \
  /usr/aarch64-linux-gnu/include/bits/stdlib-float.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/sampler.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/sampler.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h

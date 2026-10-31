@@ -1,0 +1,154 @@
+lll10@351VMLinux:~/ENSC351/ENSC351Work/as2/noworky$ gdb-multiarch noworky
+GNU gdb (Debian 16.3-1) 16.3
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from noworky...
+(gdb) target remote 192.168.7.2:2001
+Remote debugging using 192.168.7.2:2001
+Reading /lib/ld-linux-aarch64.so.1 from remote target...
+warning: File transfers from remote targets can be slow. Use "set sysroot" to access files locally instead.
+Reading /lib/ld-linux-aarch64.so.1 from remote target...
+Reading symbols from target:/lib/ld-linux-aarch64.so.1...
+(No debugging symbols found in target:/lib/ld-linux-aarch64.so.1)
+0x0000fffff7fd8e40 in ?? () from target:/lib/ld-linux-aarch64.so.1
+(gdb) break tradeArrays
+Breakpoint 1 at 0xaaaaaaaa08bc: file noworky.c, line 28.
+(gdb) continue
+Continuing.
+Reading /lib/aarch64-linux-gnu/libc.so.6 from remote target...
+display i
+Breakpoint 1, tradeArrays (array1=0xaaaaaaac16b0, array2=0xaaaaaaac1710, size=10) at noworky.c:28
+28		for (i = size-1; i >= 0; i--) {
+(gdb) display i
+1: i = 10
+(gdb) next
+29			swapContent(array1+i, array2+i);
+1: i = 9
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 9
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 8
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 8
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 7
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 7
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 6
+(gdb) 
+
+28	
+	for (i = size-1; i >= 0; i--) {
+1: i = 6
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 5
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 5
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 4
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 4
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 3
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 3
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 2
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 2
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 1
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 1
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 0
+(gdb) 
+28		for (i = size-1; i >= 0; i--) {
+1: i = 0
+(gdb) 
+29			swapContent(array1+i, array2+i);
+1: i = 4294967295
+(gdb) continue
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000aaaaaaaa0878 in swapContent (d1=0xaab2aaac16a8, d2=0xaab2aaac1708) at noworky.c:17
+17		double tmp = *d2;
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 20859] will be killed.
+
+Quit anyway? (y or n) y
+lll10@351VMLinux:~/ENSC351/ENSC351Work/as2/noworky$ 
+
+
+---------------------------------------------------------------
+Explanation
+
+The bug:
+In tradeArrays() (noworky.c, line 27), the loop variable is declared as
+"unsigned int i". The loop is:
+
+    for (i = size-1; i >= 0; i--)
+
+Because i is unsigned, it can never be negative, so the condition
+"i >= 0" is always true and the loop never ends. After the iteration
+with i = 0, the i-- makes i wrap around to 4294967295 (the largest
+unsigned 32-bit value). The code then calls swapContent(array1+i,
+array2+i) with that index, which points about 32 GB past the end of
+the arrays. Writing there causes the segmentation fault.
+
+How I found it:
+1. Ran noworky under gdbserver on the target and connected with
+   gdb-multiarch from the host. "continue" ran until the program
+   crashed with SIGSEGV inside swapContent().
+2. "bt" showed swapContent() was called from tradeArrays(), and the
+   pointer arguments d1/d2 were invalid addresses far from the arrays.
+3. Moving "up" to the tradeArrays() frame and running "print i" showed
+   i = 4294967295, which is far larger than the array size of 10.
+4. "list" showed i is declared unsigned int and the loop condition is
+   i >= 0.
+5. To confirm, I restarted, set "break tradeArrays", used "display i"
+   and stepped with "next". i counted down 9, 8, ..., 1, 0 and then
+   became 4294967295 instead of the loop ending, which confirms the
+   unsigned wrap-around.
+
+The fix:
+Change "unsigned int i;" to "int i;" in tradeArrays(). With a signed
+int, i becomes -1 after the last iteration, the condition i >= 0 is
+false, and the loop ends correctly.
+
+Note: compiling with -Wextra (which includes -Wtype-limits) would have
+warned "comparison of unsigned expression >= 0 is always true".
+---------------------------------------------------------------

@@ -1,5 +1,5 @@
 app/CMakeFiles/light_sampler.dir/src/main.c.o: \
- /home/randy/ensc351/ENSC351Work/as2/app/src/main.c \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/src/main.c \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /usr/aarch64-linux-gnu/include/stdio.h \
  /usr/aarch64-linux-gnu/include/bits/libc-header-start.h \
@@ -25,9 +25,10 @@ app/CMakeFiles/light_sampler.dir/src/main.c.o: \
  /usr/aarch64-linux-gnu/include/bits/stdio_lim.h \
  /usr/aarch64-linux-gnu/include/bits/floatn.h \
  /usr/aarch64-linux-gnu/include/bits/floatn-common.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/sampler.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/sampler.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdbool.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/periodTimer.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/terminal_out.h \
- /home/randy/ensc351/ENSC351Work/as2/app/include/udp_server.h
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/terminal_out.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/udp_server.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/led_control.h
