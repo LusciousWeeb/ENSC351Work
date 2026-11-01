@@ -24,7 +24,10 @@ void swapContent(double *d1, double *d2)
  */
 void tradeArrays(double *array1, double *array2, int size)
 {
-	unsigned int i;
+	// Bug was here: it was using 'unsigned int i', so 'i >= 0' was always true
+	// and i-- wrapped from 0 to 4294967295, indexing far outside the arrays.
+	// It should be a signed int so the loop stops after i = 0.
+	int i;
 	for (i = size-1; i >= 0; i--) {
 		swapContent(array1+i, array2+i);
 	}
