@@ -23,6 +23,19 @@
 // Must match the voltage on the MCP3208 VREF pin (3.3 V if tied to the 3.3 V rail).
 #define ADC_REF_VOLTAGE 3.3
 
+// MCP3208 SPI frame (datasheet section 6.1), 3 bytes each way:
+//   tx[0] = 0b00000 1 SGL D2   (start bit, single-ended, channel bit 2)
+//   tx[1] = D1 D0 xxxxxx       (channel bits 1..0)
+//   rx[1] low nibble + rx[2]   = 12-bit result
+#define MCP3208_TRANSFER_BYTES      3
+#define MCP3208_START_SINGLE_ENDED  0x06
+#define MCP3208_CHANNEL_D2_MASK     0x04
+#define MCP3208_CHANNEL_D2_SHIFT    2
+#define MCP3208_CHANNEL_D1D0_MASK   0x03
+#define MCP3208_CHANNEL_D1D0_SHIFT  6
+#define MCP3208_RESULT_HIGH_MASK    0x0F
+#define BITS_PER_BYTE               8
+
 static int s_spiFd = -1;
 
 void LightSensor_init(void)
@@ -56,17 +69,18 @@ void LightSensor_cleanup(void)
 int LightSensor_getRawValue(void)
 {
     // MCP3208 single-ended read: start bit, SGL=1, D2..D0 = channel
-    uint8_t tx[3] = {
-        (uint8_t)(0x06 | ((ADC_CHANNEL & 0x04) >> 2)),
-        (uint8_t)((ADC_CHANNEL & 0x03) << 6),
-        0x00
+    uint8_t tx[MCP3208_TRANSFER_BYTES] = {
+        (uint8_t)(MCP3208_START_SINGLE_ENDED
+                  | ((ADC_CHANNEL & MCP3208_CHANNEL_D2_MASK) >> MCP3208_CHANNEL_D2_SHIFT)),
+        (uint8_t)((ADC_CHANNEL & MCP3208_CHANNEL_D1D0_MASK) << MCP3208_CHANNEL_D1D0_SHIFT),
+        0
     };
-    uint8_t rx[3] = {0};
+    uint8_t rx[MCP3208_TRANSFER_BYTES] = {0};
 
     struct spi_ioc_transfer tr = {
         .tx_buf = (unsigned long)tx,
         .rx_buf = (unsigned long)rx,
-        .len = 3,
+        .len = MCP3208_TRANSFER_BYTES,
         .speed_hz = SPI_SPEED_HZ,
         .bits_per_word = SPI_BITS,
         .cs_change = 0
@@ -77,7 +91,7 @@ int LightSensor_getRawValue(void)
         exit(EXIT_FAILURE);
     }
 
-    return ((rx[1] & 0x0F) << 8) | rx[2];
+    return ((rx[1] & MCP3208_RESULT_HIGH_MASK) << BITS_PER_BYTE) | rx[2];
 }
 
 double LightSensor_getVoltage(void)

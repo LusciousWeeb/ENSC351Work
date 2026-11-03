@@ -72,24 +72,10 @@ include hal/CMakeFiles/hal.dir/flags.make
 hal/CMakeFiles/hal.dir/codegen:
 .PHONY : hal/CMakeFiles/hal.dir/codegen
 
-hal/CMakeFiles/hal.dir/src/led.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/src/led.c.o: /home/lll10/ENSC351/ENSC351Work/as2/hal/src/led.c
-hal/CMakeFiles/hal.dir/src/led.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object hal/CMakeFiles/hal.dir/src/led.c.o"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/src/led.c.o -MF CMakeFiles/hal.dir/src/led.c.o.d -o CMakeFiles/hal.dir/src/led.c.o -c /home/lll10/ENSC351/ENSC351Work/as2/hal/src/led.c
-
-hal/CMakeFiles/hal.dir/src/led.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/src/led.c.i"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lll10/ENSC351/ENSC351Work/as2/hal/src/led.c > CMakeFiles/hal.dir/src/led.c.i
-
-hal/CMakeFiles/hal.dir/src/led.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/src/led.c.s"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lll10/ENSC351/ENSC351Work/as2/hal/src/led.c -o CMakeFiles/hal.dir/src/led.c.s
-
 hal/CMakeFiles/hal.dir/src/light_sensor.c.o: hal/CMakeFiles/hal.dir/flags.make
 hal/CMakeFiles/hal.dir/src/light_sensor.c.o: /home/lll10/ENSC351/ENSC351Work/as2/hal/src/light_sensor.c
 hal/CMakeFiles/hal.dir/src/light_sensor.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object hal/CMakeFiles/hal.dir/src/light_sensor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object hal/CMakeFiles/hal.dir/src/light_sensor.c.o"
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/src/light_sensor.c.o -MF CMakeFiles/hal.dir/src/light_sensor.c.o.d -o CMakeFiles/hal.dir/src/light_sensor.c.o -c /home/lll10/ENSC351/ENSC351Work/as2/hal/src/light_sensor.c
 
 hal/CMakeFiles/hal.dir/src/light_sensor.c.i: cmake_force
@@ -103,7 +89,7 @@ hal/CMakeFiles/hal.dir/src/light_sensor.c.s: cmake_force
 hal/CMakeFiles/hal.dir/src/pwm_led.c.o: hal/CMakeFiles/hal.dir/flags.make
 hal/CMakeFiles/hal.dir/src/pwm_led.c.o: /home/lll10/ENSC351/ENSC351Work/as2/hal/src/pwm_led.c
 hal/CMakeFiles/hal.dir/src/pwm_led.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object hal/CMakeFiles/hal.dir/src/pwm_led.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object hal/CMakeFiles/hal.dir/src/pwm_led.c.o"
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/src/pwm_led.c.o -MF CMakeFiles/hal.dir/src/pwm_led.c.o.d -o CMakeFiles/hal.dir/src/pwm_led.c.o -c /home/lll10/ENSC351/ENSC351Work/as2/hal/src/pwm_led.c
 
 hal/CMakeFiles/hal.dir/src/pwm_led.c.i: cmake_force
@@ -117,7 +103,7 @@ hal/CMakeFiles/hal.dir/src/pwm_led.c.s: cmake_force
 hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o: hal/CMakeFiles/hal.dir/flags.make
 hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o: /home/lll10/ENSC351/ENSC351Work/as2/hal/src/rotary_encoder.c
 hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o"
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o -MF CMakeFiles/hal.dir/src/rotary_encoder.c.o.d -o CMakeFiles/hal.dir/src/rotary_encoder.c.o -c /home/lll10/ENSC351/ENSC351Work/as2/hal/src/rotary_encoder.c
 
 hal/CMakeFiles/hal.dir/src/rotary_encoder.c.i: cmake_force
@@ -128,39 +114,21 @@ hal/CMakeFiles/hal.dir/src/rotary_encoder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/src/rotary_encoder.c.s"
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lll10/ENSC351/ENSC351Work/as2/hal/src/rotary_encoder.c -o CMakeFiles/hal.dir/src/rotary_encoder.c.s
 
-hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o: hal/CMakeFiles/hal.dir/flags.make
-hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o: /home/lll10/ENSC351/ENSC351Work/as2/hal/src/spi_adc_test.c
-hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o: hal/CMakeFiles/hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o -MF CMakeFiles/hal.dir/src/spi_adc_test.c.o.d -o CMakeFiles/hal.dir/src/spi_adc_test.c.o -c /home/lll10/ENSC351/ENSC351Work/as2/hal/src/spi_adc_test.c
-
-hal/CMakeFiles/hal.dir/src/spi_adc_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hal.dir/src/spi_adc_test.c.i"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lll10/ENSC351/ENSC351Work/as2/hal/src/spi_adc_test.c > CMakeFiles/hal.dir/src/spi_adc_test.c.i
-
-hal/CMakeFiles/hal.dir/src/spi_adc_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hal.dir/src/spi_adc_test.c.s"
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lll10/ENSC351/ENSC351Work/as2/hal/src/spi_adc_test.c -o CMakeFiles/hal.dir/src/spi_adc_test.c.s
-
 # Object files for target hal
 hal_OBJECTS = \
-"CMakeFiles/hal.dir/src/led.c.o" \
 "CMakeFiles/hal.dir/src/light_sensor.c.o" \
 "CMakeFiles/hal.dir/src/pwm_led.c.o" \
-"CMakeFiles/hal.dir/src/rotary_encoder.c.o" \
-"CMakeFiles/hal.dir/src/spi_adc_test.c.o"
+"CMakeFiles/hal.dir/src/rotary_encoder.c.o"
 
 # External object files for target hal
 hal_EXTERNAL_OBJECTS =
 
-hal/libhal.a: hal/CMakeFiles/hal.dir/src/led.c.o
 hal/libhal.a: hal/CMakeFiles/hal.dir/src/light_sensor.c.o
 hal/libhal.a: hal/CMakeFiles/hal.dir/src/pwm_led.c.o
 hal/libhal.a: hal/CMakeFiles/hal.dir/src/rotary_encoder.c.o
-hal/libhal.a: hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o
 hal/libhal.a: hal/CMakeFiles/hal.dir/build.make
 hal/libhal.a: hal/CMakeFiles/hal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library libhal.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lll10/ENSC351/ENSC351Work/as2/build/target/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libhal.a"
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && $(CMAKE_COMMAND) -P CMakeFiles/hal.dir/cmake_clean_target.cmake
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target/hal && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hal.dir/link.txt --verbose=$(VERBOSE)
 

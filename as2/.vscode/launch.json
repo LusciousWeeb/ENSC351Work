@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug noworky (remote)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/noworky/noworky",
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb-multiarch",
+            "miDebuggerServerAddress": "192.168.7.2:2001"
+        }
+    ]
+}

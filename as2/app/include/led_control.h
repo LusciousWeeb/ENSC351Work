@@ -1,3 +1,6 @@
+// led_control.c
+// Connects rotary-encoder steps to the PWM LED flash frequency.
+
 #ifndef LED_CONTROL_H
 #define LED_CONTROL_H
 

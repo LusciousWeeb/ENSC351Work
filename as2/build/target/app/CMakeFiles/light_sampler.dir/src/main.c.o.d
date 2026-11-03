@@ -25,10 +25,10 @@ app/CMakeFiles/light_sampler.dir/src/main.c.o: \
  /usr/aarch64-linux-gnu/include/bits/stdio_lim.h \
  /usr/aarch64-linux-gnu/include/bits/floatn.h \
  /usr/aarch64-linux-gnu/include/bits/floatn-common.h \
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/led_control.h \
  /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h \
  /home/lll10/ENSC351/ENSC351Work/as2/app/include/sampler.h \
  /usr/lib/gcc-cross/aarch64-linux-gnu/14/include/stdbool.h \
  /home/lll10/ENSC351/ENSC351Work/as2/app/include/periodTimer.h \
  /home/lll10/ENSC351/ENSC351Work/as2/app/include/terminal_out.h \
- /home/lll10/ENSC351/ENSC351Work/as2/app/include/udp_server.h \
- /home/lll10/ENSC351/ENSC351Work/as2/app/include/led_control.h
+ /home/lll10/ENSC351/ENSC351Work/as2/app/include/udp_server.h

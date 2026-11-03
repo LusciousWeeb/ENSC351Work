@@ -37,6 +37,7 @@
 #define NS_PER_SEC            1000000000LL
 #define MAX_HW_PERIOD_NS      469754879LL       // hardware limit (course guide)
 #define SLOW_MODE_PERIOD_NS   100000000LL       // fixed hw period while blinking in software
+#define SYSFS_PATH_MAX        256
 
 static pthread_t s_thread;
 static pthread_mutex_t s_lock = PTHREAD_MUTEX_INITIALIZER;
@@ -52,7 +53,7 @@ static bool s_slowLedOn = false;                // state of the software blink
 // (e.g. period too large) when the file is closed, so check fclose() too.
 static bool writeValue(const char *fileName, long long value)
 {
-    char path[256];
+    char path[SYSFS_PATH_MAX];
     snprintf(path, sizeof(path), "%s/%s", PWM_LED_SYSFS_DIR, fileName);
 
     FILE *file = fopen(path, "w");

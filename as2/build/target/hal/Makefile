@@ -130,30 +130,6 @@ hal/fast:
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/build
 .PHONY : hal/fast
 
-src/led.o: src/led.c.o
-.PHONY : src/led.o
-
-# target to build an object file
-src/led.c.o:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.o
-.PHONY : src/led.c.o
-
-src/led.i: src/led.c.i
-.PHONY : src/led.i
-
-# target to preprocess a source file
-src/led.c.i:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.i
-.PHONY : src/led.c.i
-
-src/led.s: src/led.c.s
-.PHONY : src/led.s
-
-# target to generate assembly for a file
-src/led.c.s:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/led.c.s
-.PHONY : src/led.c.s
-
 src/light_sensor.o: src/light_sensor.c.o
 .PHONY : src/light_sensor.o
 
@@ -226,30 +202,6 @@ src/rotary_encoder.c.s:
 	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/rotary_encoder.c.s
 .PHONY : src/rotary_encoder.c.s
 
-src/spi_adc_test.o: src/spi_adc_test.c.o
-.PHONY : src/spi_adc_test.o
-
-# target to build an object file
-src/spi_adc_test.c.o:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.o
-.PHONY : src/spi_adc_test.c.o
-
-src/spi_adc_test.i: src/spi_adc_test.c.i
-.PHONY : src/spi_adc_test.i
-
-# target to preprocess a source file
-src/spi_adc_test.c.i:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.i
-.PHONY : src/spi_adc_test.c.i
-
-src/spi_adc_test.s: src/spi_adc_test.c.s
-.PHONY : src/spi_adc_test.s
-
-# target to generate assembly for a file
-src/spi_adc_test.c.s:
-	cd /home/lll10/ENSC351/ENSC351Work/as2/build/target && $(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal.dir/build.make hal/CMakeFiles/hal.dir/src/spi_adc_test.c.s
-.PHONY : src/spi_adc_test.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -259,9 +211,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hal"
-	@echo "... src/led.o"
-	@echo "... src/led.i"
-	@echo "... src/led.s"
 	@echo "... src/light_sensor.o"
 	@echo "... src/light_sensor.i"
 	@echo "... src/light_sensor.s"
@@ -271,9 +220,6 @@ help:
 	@echo "... src/rotary_encoder.o"
 	@echo "... src/rotary_encoder.i"
 	@echo "... src/rotary_encoder.s"
-	@echo "... src/spi_adc_test.o"
-	@echo "... src/spi_adc_test.i"
-	@echo "... src/spi_adc_test.s"
 .PHONY : help
 
 
