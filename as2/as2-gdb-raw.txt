@@ -1,73 +1,0 @@
-Script started on 2026-11-02 20:09:05-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="104" LINES="50"]
-[?2004h]0;lll10@351VMLinux: ~/ENSC351/ENSC351Work/as2[01;32mlll10@351VMLinux[00m:[01;34m~/ENSC351/ENSC351Work/as2[00m$ gdb-multiarch noworky
-[?2004l[35;1mGNU gdb (Debian 16.3-1) 16.3[m
-Copyright (C) 2024 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <[32mhttp://gnu.org/licenses/gpl.html[m>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-Type "[1mshow copying[m" and "[1mshow warranty[m" for details.
-This GDB was configured as "x86_64-linux-gnu".
-Type "[1mshow configuration[m" for configuration details.
-For bug reporting instructions, please see:
-[32m<https://www.gnu.org/software/gdb/bugs/>[m.
-Find the GDB manual and other documentation resources online at:
-    <[32mhttp://www.gnu.org/software/gdb/documentation/[m>.
-
-For help, type "[1mhelp[m".
-Type "[1mapropos word[m" to search for commands related to "word"...
-noworky: No such file or directory.
-[?2004h(gdb) target remote 192.168.7.2:2001
-[?2004lRemote debugging using 192.168.7.2:2001
-Reading [32m/mnt/remote/myApps/noworky[m from remote target...
-warning: File transfers from remote targets can be slow. Use "[1mset sysroot[m" to access files locally instead.
-Reading [32m/mnt/remote/myApps/noworky[m from remote target...
-Reading symbols from [32mtarget:/mnt/remote/myApps/noworky[m...
-Reading [32m/lib/ld-linux-aarch64.so.1[m from remote target...
-Reading [32m/lib/ld-linux-aarch64.so.1[m from remote target...
-Reading symbols from [32mtarget:/lib/ld-linux-aarch64.so.1[m...
-(No debugging symbols found in [32mtarget:/lib/ld-linux-aarch64.so.1[m)
-[34m0x0000fffff7fd8e40[m in [33m??[m () from [32mtarget:/lib/ld-linux-aarch64.so.1[m
-[?2004h(gdb) continue
-[?2004lContinuing.
-Reading [32m/lib/aarch64-linux-gnu/libc.so.6[m from remote target...
-
-Program received signal SIGSEGV, Segmentation fault.
-[34m0x0000aaaaaaaa0878[m in [33mswapContent[m ([36md1[m=0xaab2aaac16a8, [36md2[m=0xaab2aaac1708) at [32mnoworky.c[m:[2m17[m
-warning: Source file is more recent than executable.
-[2m17[m		[32mdouble[m tmp [31m=[m [31m*[md2[31m;[m
-[?2004h[?2004l[?2004h(gdb) bt
-[?2004l#0  [34m0x0000aaaaaaaa0878[m in [33mswapContent[m ([36md1[m=0xaab2aaac16a8, [36md2[m=0xaab2aaac1708) at [32mnoworky.c[m:[2m17[m
-#1  [34m0x0000aaaaaaaa08f4[m in [33mtradeArrays[m ([36marray1[m=0xaaaaaaac16b0, [36marray2[m=0xaaaaaaac1710, [36msize[m=10)
-    at [32mnoworky.c[m:[2m29[m
-#2  [34m0x0000aaaaaaaa0a78[m in [33mmain[m () at [32mnoworky.c[m:[2m73[m
-[?2004h(gdb) up
-[?2004l#1  [34m0x0000aaaaaaaa08f4[m in [33mtradeArrays[m ([36marray1[m=0xaaaaaaac16b0, [36marray2[m=0xaaaaaaac1710, [36msize[m=10)
-    at [32mnoworky.c[m:[2m29[m
-[2m29[m		[36m// It should be a signed int so the loop stops after i = 0.[m
-[?2004h(gdb) print i
-[?2004l[36m$1[m = 4294967295
-[?2004h(gdb) print sie[Kze
-[?2004l[36m$2[m = 10
-[?2004h(gdb) list
-[?2004l[2m24[m	[36m */[m
-[2m25[m	[32mvoid[m [01mtradeArrays[m[31m([m[32mdouble[m [31m*[marray1[31m,[m [32mdouble[m [31m*[marray2[31m,[m [32mint[m size[31m)[m
-[2m26[m	[31m{[m
-[2m27[m		[36m// Bug was here: it was using 'unsigned int i', so 'i >= 0' was always true[m
-[2m28[m		[36m// and i-- wrapped from 0 to 4294967295, indexing far outside the arrays.[m
-[2m29[m		[36m// It should be a signed int so the loop stops after i = 0.[m
-[2m30[m		[32mint[m i[31m;[m
-[2m31[m		[01;34mfor[m [31m([mi [31m=[m size[31m-[m[35m1[m[31m;[m i [31m>=[m [35m0[m[31m;[m i[31m--)[m [31m{[m
-[2m32[m			[01mswapContent[m[31m([marray1[31m+[mi[31m,[m array2[31m+[mi[31m);[m
-[2m33[m		[31m}[m
-[?2004h(gdb) info locals
-[?2004l[36mi[m = 4294967295
-[?2004h(gdb) quit
-[?2004l[?2004hA debugging session is active.
-
-	Inferior 1 [process 938] will be killed.
-
-Quit anyway? (y or n) y
-[?2004l[?2004h]0;lll10@351VMLinux: ~/ENSC351/ENSC351Work/as2[01;32mlll10@351VMLinux[00m:[01;34m~/ENSC351/ENSC351Work/as2[00m$ exit
-[?2004lexit
-
-Script done on 2026-11-02 20:10:29-08:00 [COMMAND_EXIT_CODE="0"]
