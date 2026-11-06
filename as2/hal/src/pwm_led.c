@@ -1,23 +1,3 @@
-// hal/src/pwm_led.c
-// Flashes the LED emitter (GPIO12 / header pin 32) using the BeagleY-AI PWM.
-//
-// The PWM is driven through sysfs files in /dev/hat/pwm/GPIO12/
-// (period and duty_cycle are in nanoseconds, enable is 0 or 1).
-//
-// One-time board setup (see the course PWM guide):
-//   1. In /boot/firmware/extlinux/extlinux.conf add, under the default label:
-//        fdtoverlays /overlays/k3-am67a-beagley-ai-pwm-epwm0-gpio12.dtbo
-//      then reboot.
-//   2. After every reboot the pin must be exported:
-//        sudo beagle-pwm-export --pin hat-32
-//      PwmLed_init() tries to do this itself if the folder is missing
-//      (it needs to be run as root for that to work).
-//
-// The hardware can only produce a period up to 469,754,879 ns (about 2.1 Hz),
-// so 1 Hz and 2 Hz are produced in software: the PWM is held at a fixed period
-// and a small thread switches the output fully on / fully off at the right
-// rate. Everything 3 Hz and above is pure hardware PWM at 50% duty.
-
 #include "hal/pwm_led.h"
 
 #include <errno.h>
@@ -163,24 +143,29 @@ void PwmLed_init(void)
     if (!writeValue("period", MAX_HW_PERIOD_NS)
         || !writeValue("duty_cycle", 0)
         || !writeValue("enable", 0)) {
+        fprintf(stderr, "ERROR: PwmLed: unable to configure PWM in %s\n",
+                PWM_LED_SYSFS_DIR);
+        exit(EXIT_FAILURE);
+    }
 
-        pthread_condattr_t attr;
-        pthread_condattr_init(&attr);
-        pthread_condattr_setclock(&attr, CLOCK_MONOTONIC);
-        pthread_cond_init(&s_cond, &attr);
-        pthread_condattr_destroy(&attr);
+    // Condition variable on the monotonic clock (used by the slow-blink thread).
+    pthread_condattr_t attr;
+    pthread_condattr_init(&attr);
+    pthread_condattr_setclock(&attr, CLOCK_MONOTONIC);
+    pthread_cond_init(&s_cond, &attr);
+    pthread_condattr_destroy(&attr);
 
-        s_hz = 0;
-        s_slowHz = 0;
-        s_isRunning = true;
-        s_isInitialized = true;
+    s_hz = 0;
+    s_slowHz = 0;
+    s_isRunning = true;
+    s_isInitialized = true;
 
-        if (pthread_create(&s_thread, NULL, slowBlinkThread, NULL) != 0) {
-            perror("ERROR: PwmLed: unable to create thread");
-            exit(EXIT_FAILURE);
-        }
+    if (pthread_create(&s_thread, NULL, slowBlinkThread, NULL) != 0) {
+        perror("ERROR: PwmLed: unable to create thread");
+        exit(EXIT_FAILURE);
     }
 }
+
 void PwmLed_cleanup(void)
 {
     if (!s_isInitialized) {
